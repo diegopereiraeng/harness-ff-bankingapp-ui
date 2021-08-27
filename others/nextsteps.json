@@ -1,0 +1,71 @@
+[
+    {
+        "type": "fa-bank",
+        "name": "Home"
+    },
+    {
+        "type": "fa-flag",
+        "name": "Introducao a Feature flags ",
+        "href": "https://harness.io/blog/product-updates/introducing-harness-feature-flags/"
+    },
+    {
+        "type": "fa-flag",
+        "name": "O que é Feature flags?",
+        "href": "https://harness.io/blog/feature-flags/what-are-feature-flags/"
+    },
+    {
+        "type": "fa-dove",
+        "name": "Continuous Delivery",
+        "href": "https://harness.io/2018/07/continuous-delivery-demo-in-5-minutes/"
+    },
+    {
+        "type": "fa-dove",
+        "name": "Demo CD (5min)",
+        "href": "https://harness.io/2018/07/continuous-delivery-demo-in-5-minutes/"
+    },
+    {
+        "type": "fa-dove",
+        "name": "Reportágem",
+        "href": "https://harness.io/2020/01/solving-one-of-continuous-deliverys-biggest-challenges-standardization/"
+    },
+    {
+        "type": "fa-microchip",
+        "name": "CIE",
+        "href": "https://harness.io/blog/continuous-integration/introducing-harness-ci-enterprise/"
+    },
+    {
+        "type": "fa-tools",
+        "name": "CI no Youtube",
+        "href": "https://www.youtube.com/embed/kZmOCLCpvmk?index=8&modestbranding=1&amp;showinfo=0?start=2"
+    },
+    {
+        "type": "fa-microchip",
+        "name": "Continuous Verification",
+        "href": "https://harness.io/continuous-delivery/continuous-verification/"
+    },
+    {
+        "type": "fa-microchip",
+        "name": "Smart Automation",
+        "href": "https://harness.io/platform/continuous-delivery/smart-automation/"
+    },
+    {
+        "type": "fa-shield-alt",
+        "name": "Continuous Security",
+        "href": "https://harness.io/continuous-delivery/continuous-security/"
+    },
+    {
+        "type": "fa-dollar-sign",
+        "name": "Continuous Efficiency",
+        "href": "https://harness.io/2018/07/continuous-efficiency-demo-in-5-minutes/"
+    },
+    {
+        "type": "fa-user-friends",
+        "name": "Video de clientes",
+        "href": "https://harness.io/customers/"
+    },
+    {
+        "type": "fa-shield-alt",
+        "name": "Documentação Segurança",
+        "href": "https://docs.harness.io/article/47awo4xim5-harness-security-faq"
+    }
+]

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harness FF Demo</title>
+    <meta charset="UTF-8">
+
+    <script src="./seguros.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="./js/home.js"></script>
+    <script type="module" src="./js/ff.js"></script>
+    <link href="./seguros.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" id="harnessio-home-critical-css" href="https://harness.io/wp-content/themes/harnessio/assets/css/home-critical-20210701.min.css?ver=1.7.0" type="text/css" media="all">
+    <link href="./maintenance.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Modal -->
+    <link href="./alert.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Youtube -->
+    <link href="./youtube.css" type="text/css" rel="stylesheet"/>
+    <script type="module" src="./js/youtube.js"></script>
+
+</head>
+
+<body>
+
+<!-- Button trigger Youtube modal -->
+<div style="display:none;">
+    <!-- Button trigger Youtube modal -->
+<button id="youtubebtn" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/VSHVo9jHMAk" data-target="#youtubeModal" style="display:none;">
+
+</div>
+<!-- Button HTML (to Trigger Modal) -->
+<a id="modalButton" href="#myModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
+<a id="successButton" href="#sucessModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
+
+<!-- Harness CKO Mode -->
+<div id="cko2021" style="display: none;">
+    <iframe id="ckoContent" type="text/html" width="100%" height="1000px" class="embed-responsive-item" src="http://34.94.96.94:3000/" id="cko"  allowscriptaccess="always" title="Harness - CKO 2021" allow="autoplay" allowfullscreen></iframe>
+    <!--iframe id="ckoContent" src="http://34.94.96.94:3000/" style="z-index: 2;border: none;display: none;" width="auto" height="auto"></iframe-->
+</div>
+
+<!-- Maitenance Mode -->
+<div id="maintenance" style="display: none;">
+    <div id="error">
+        <div id="box"></div>
+        <h3>Site under Maintenance</h3>
+        <p>Things are a little <span>unstable</span> here</p>
+        <p>I suggest come back later</p>
+    </div>
+    <p></p>
+</div>
+<div id="qrcode-menu">
+    <nav class="w3-sidebar w3-collapse harness-wildcard" style="z-index:3;width:100%;display: none;" id="Sidebar"><br>
+        <div id="qrcode" class="logo">
+            <img id="qrcode-img" src="./images/qrcode2.png" height="600" > <!--width="114"-->
+        </div>
+    </nav>
+</div>
+<!-- Top container -->
+<div id="site"  class="site" style="display: none;">
+
+
+<div id="header-container" class="header">
+    <div id="logo" class="logo">
+        <img id="logo-img" src="https://harness.io/wp-content/themes/harnessio/assets/images/harness-logo.svg" >
+    </div>
+    <div id="titulo" class="titulo">
+        Banking App
+    </div>
+
+</div>
+
+
+<section id="sectionID" class="forms-section">
+
+    <div class="forms">
+        <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-login">
+                Login
+                <span class="underline"></span>
+            </button>
+            <form id="login" class="form form-login" action="home_new.html">
+                <fieldset>
+                    <legend>Please, enter your email and password for login.</legend>
+                    <div class="input-block">
+                        <label for="login-email">E-mail</label>
+                        <input id="login-email" type="email" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="login-company">Company</label>
+                        <input id="login-company" type="text" required>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+        </div>
+        <div class="form-wrapper">
+            <button type="button" class="switcher switcher-signup">
+                Sign Up
+                <span class="underline"></span>
+            </button>
+            <form id="signup" class="form form-signup">
+                <fieldset>
+                    <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                    <div class="input-block">
+                        <label for="signup-name">Name</label>
+                        <input id="signup-name" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="signup-company">Company</label>
+                        <input id="signup-company" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="signup-email">E-mail</label>
+                        <input id="signup-email" type="email" required>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn-signup">Continue</button>
+            </form>
+        </div>
+    </div>
+</section>
+</div>
+<section id="scrolling-partners-section" style="display: none;">
+    <div id="scrolling-partners-wrapper">
+        <div id="scrolling-marquee" style="background: url(https://harness.io/wp-content/themes/harnessio/assets/images/homepage_logos.png) repeat-x;">
+        </div>
+        <div id="scrolling-partners__link-wrap">
+            <a id="scrolling-partners__link" href="http://harness.io/customers"><span>Meet Our Customers</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- Modal ---->
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i id="iconModal" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
+                </div>
+                <h4 id="modalTitle" class="modal-title w-100">Awesome!</h4>
+            </div>
+            <div class="modal-body">
+                <p id="ModalMessage" class="text-center">Your Premium Trial will expire soon, click here to choose a package plan.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnModalOk" class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SUCCESS Modal HTML -->
+<!--div id="successModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i id="iconModalSucesss" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
+                <!--/div>
+                <h4 id="modalTitleSucesss" class="modal-title w-100">Awesome!</h4>
+            </div>
+            <div class="modal-body">
+                <p id="ModalMessageSucesss" class="text-center">Registered</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div-->
+
+<!-- Youtube Modal -->
+<div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="Harness on Youtube" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+
+            <div class="modal-body" >
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9" width="720" height="405" >
+                    <!--iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/VSHVo9jHMAk" title="Captain Canary" allowscriptaccess="always" allow="autoplay" allowfullscreen></iframe-->
+                    <iframe id="youtubeID" type="text/html" width="720" height="405" class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" title="Captain Canary" allow="autoplay" allowfullscreen></iframe>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
