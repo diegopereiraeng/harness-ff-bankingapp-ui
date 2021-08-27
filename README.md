@@ -24,6 +24,9 @@ flag will be "Home_Maintenance"
 ### ENABLE OR DISABLE MAINTENANCE MODE
 Use Harness Boolean FF to enable or disable maintenance mode.
 
+Flag: Home_Maintenance
+Type: Boolean
+
 	function Home_Maintenance(maintenance) {
 
 		var siteElement = $("body").find(".site");
@@ -45,6 +48,9 @@ Use Harness Boolean FF to enable or disable maintenance mode.
 
 ### CHANGE LOGO IMAGE
 Use Harness String Variant  FF to change logo image
+Flag: Home_Logo
+Type: String Variant
+Value: logo url - ex: http://site.com/image.png
 
 	function Home_Logo(logo) {
 		var imgElement = $("body").find("#logo-img");
@@ -54,6 +60,9 @@ Use Harness String Variant  FF to change logo image
   
 ### SEND MESSAGE TO CUSTOMER
 Use Harness String Variant FF to send different messages for your customer.
+Flag: ALL_ALERT_MODAL
+Type: String Variant
+Value: Message
 
 	function ALL_ALERT_MODAL(flag) {
 		var title
@@ -118,6 +127,9 @@ Use Harness String Variant FF to send different messages for your customer.
 
 ### SHOW YOUTUBE VIDEO
 Use Harness String Variant FF to show your youtube videos for your customer.
+Flag: ALL_YOUTUBE_MODAL
+Type: String Variant
+Value: Youtube video ID
 
 	function ALL_YOUTUBE_MODAL(flag) {
 		if ( flag != "off" && (youtubeStatus != flag) ){
@@ -155,6 +167,9 @@ Use Harness Boolean FF to enable or disable the marketing banner.
 
 ### CHANGE TEXT HEADER NAME
 Use Harness String Variant  FF to change all text header name
+Flag: Home_Header_Name
+Type: String Variant
+Value: Header Text
 
 	function Home_Header_Name(flag) {
 		checkHeader();
@@ -162,6 +177,13 @@ Use Harness String Variant  FF to change all text header name
 
 ### CHANGE HOME MENU FEATURES
 Use Harness JSON Variant  FF to change Menu feature
+Flag: Home_Header_Name
+Type: JSON Variant
+Value: JSON ex:
+
+    [    { "type": "fa-users", "name": "Home" },   { "type": "fa-eye", "name": "Activities" },   { "type": "fa-users", "name": "Bills" },   { "type": "fa-bullseye", "name": "Services" },   { "type": "fa-hand-holding-usd", "name": "Loans" },   { "type": "fa-bell", "name": "Insurance" },   { "type": "fa-bank", "name": "Crypto" },   { "type": "fa-history", "name": "Help" },   { "type": "fa-cog", "name": "Settings" },{"type": "fa-cog" , "name": "Time" } ]
+
+FUNCTIO:
 
 	function Home_Menu(flag) {
 		if (window.location.href.indexOf("home_new.html") > -1 ) {
