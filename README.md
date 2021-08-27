@@ -1,10 +1,7 @@
 # FF Banking App UI
 
-  
-
 ## FF LAB
 
-  
 #### Create the flags and add them to code:
 
 1 - edit the [ff.js](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/js/ff.js) file and search for ----> ADD Your FEATURES HERE <--------
