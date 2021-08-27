@@ -494,7 +494,7 @@ function checkLogo(){
 }
 
 
-}
+
 function checkHeader(){
     var header = cf.variation('Home_Header_Name', "Banking App")
     console.log("Header: "+header);
