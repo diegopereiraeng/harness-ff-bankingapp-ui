@@ -25,6 +25,7 @@ flag will be "Home_Maintenance"
 Use Harness Boolean FF to enable or disable maintenance mode.
 
 Flag: Home_Maintenance
+
 Type: Boolean
 
 	function Home_Maintenance(maintenance) {
@@ -48,8 +49,11 @@ Type: Boolean
 
 ### CHANGE LOGO IMAGE
 Use Harness String Variant  FF to change logo image
+
 Flag: Home_Logo
+
 Type: String Variant
+
 Value: logo url - ex: http://site.com/image.png
 
 	function Home_Logo(logo) {
@@ -60,8 +64,11 @@ Value: logo url - ex: http://site.com/image.png
   
 ### SEND MESSAGE TO CUSTOMER
 Use Harness String Variant FF to send different messages for your customer.
+
 Flag: ALL_ALERT_MODAL
+
 Type: String Variant
+
 Value: Message
 
 	function ALL_ALERT_MODAL(flag) {
@@ -127,8 +134,11 @@ Value: Message
 
 ### SHOW YOUTUBE VIDEO
 Use Harness String Variant FF to show your youtube videos for your customer.
+
 Flag: ALL_YOUTUBE_MODAL
+
 Type: String Variant
+
 Value: Youtube video ID
 
 	function ALL_YOUTUBE_MODAL(flag) {
@@ -161,14 +171,21 @@ Value: Youtube video ID
 ### ADD OR REMOVE MARKETING BANNER
 Use Harness Boolean FF to enable or disable the marketing banner.
 
+Flag: Home_Banner
+
+Type: Boolean
+
 	function Home_Banner(flag) {
 		checkBanner();
 	}
 
 ### CHANGE TEXT HEADER NAME
 Use Harness String Variant  FF to change all text header name
+
 Flag: Home_Header_Name
+
 Type: String Variant
+
 Value: Header Text
 
 	function Home_Header_Name(flag) {
@@ -177,8 +194,11 @@ Value: Header Text
 
 ### CHANGE HOME MENU FEATURES
 Use Harness JSON Variant  FF to change Menu feature
+
 Flag: Home_Header_Name
+
 Type: JSON Variant
+
 Value: JSON ex:
 
     [    { "type": "fa-users", "name": "Home" },   { "type": "fa-eye", "name": "Activities" },   { "type": "fa-users", "name": "Bills" },   { "type": "fa-bullseye", "name": "Services" },   { "type": "fa-hand-holding-usd", "name": "Loans" },   { "type": "fa-bell", "name": "Insurance" },   { "type": "fa-bank", "name": "Crypto" },   { "type": "fa-history", "name": "Help" },   { "type": "fa-cog", "name": "Settings" },{"type": "fa-cog" , "name": "Time" } ]
@@ -196,12 +216,24 @@ FUNCTIO:
 ### CHANGE HOME BODY COLOR
 Use Harness String Variant  FF to change body color.
 
+Flag: Home_Body_Color
+
+Type: String Variant
+
+Value: html color code or main color names
+
 	function Home_Body_Color(flag) {
 		checkSiteColor();
 	}
 	
 ### CHANGE HOME BODY TEXT COLOR
 Use Harness String Variant  FF to change all text color.
+
+Flag: Home_Body_Text_Color
+
+Type: String Variant
+
+Value: html color code or main color names
 
 	function Home_Body_Text_Color(flag) {
 		checkSiteColor();
