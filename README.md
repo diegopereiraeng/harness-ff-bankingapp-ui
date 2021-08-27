@@ -1,6 +1,5 @@
 # FF Banking App UI
 
-  
 
 ## FF LAB
 
