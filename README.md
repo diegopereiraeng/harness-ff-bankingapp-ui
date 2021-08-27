@@ -5,11 +5,21 @@
 ## FF LAB
 
   
-#### Create your flags and add them to code:
+#### Create the flags and add them to code:
 
 1 - edit the [ff.js](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/js/ff.js) file and search for ----> ADD Your FEATURES HERE <--------
 
-2 - Create the flags using the same name of functions below for better experience.
+2 - Add one or more feature below to this part of the code
+
+3 - Create a Pull Request using your FF key as Title of this Pull Request.
+
+4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
+ex: http://34.121.70.58/Your-Github-User/index.html
+
+5 - Create the flags using the same name of functions below.
+
+ex: function Home_Maintenance(maintenance) {
+flag will be "Home_Maintenance"
 
 ### ENABLE OR DISABLE MAINTENANCE MODE
 Use Harness Boolean FF to enable or disable maintenance mode.
