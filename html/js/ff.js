@@ -222,7 +222,7 @@ if (window.location.href.indexOf("index.html") > -1) {
         form.addEventListener("submit", processLogin);
     }
     /* Sign Up */
-    var form = document.getElementById('signup');
+    form = document.getElementById('signup');
     if (form.attachEvent) {
         form.attachEvent("submit", processSignUp);
     } else {
@@ -233,22 +233,19 @@ if (window.location.href.indexOf("index.html") > -1) {
 
     switchers.forEach(item => {
         item.addEventListener('click', function() {
-            switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+            switchers.forEach(item1 => item1.parentElement.classList.remove('is-active'))
             this.parentElement.classList.add('is-active')
         })
     })
 
 }
 
-
 /* End submit interception */
 
 /* Intercep Resize */
 
-
 function resizeIframe(){
     let iframe = document.querySelector("#iframeContent");
-    let iYoutube = document.querySelector("#iframeContent");
 
     iframe.addEventListener('load', function() {
         console.log("resizing 2")
@@ -305,8 +302,7 @@ function showMenuContent(site,name,id){
         $("body").find("#iframeContent").attr("src",site);
 
         $("body").find("#homeContent").attr("style","display:none;margin-left:300px;margin-top:3px;");
-        //var iframe = $('body', $('#iframeContent')[0].contentWindow.document);
-        //iframe.find("#onetrust-accept-btn-handler").click();
+
         $("#iframeContent").on("load", function(){
             console.log($(this).contents().find('#onetrust-accept-btn-handler').click())
             $(this).contents().find('#onetrust-accept-btn-handler').trigger("click");
@@ -378,6 +374,7 @@ function checkMenu(){
 
     for (const [key, value] of Object.entries(menu)) {
         console.log(value.name);
+        console.log(key);
         var href
         var objectIcon
         var newLink;
@@ -406,7 +403,6 @@ function checkMenu(){
         var menuSelected = "w3-"+cf.variation('Home_Menu_Dashboard_Selection_Color',"blue")
         
         if (value.name == "Home") {
-            var active = ''
             if (firstStart) {
                 newLink = $("<a />", {
                     class: "w3-bar-item w3-button "+paddingClass+" "+menuSelected+" active",
@@ -455,7 +451,7 @@ function checkMenu(){
 
         $(newLink).appendTo(".w3-bar-block");
         console.log(newLink);
-    };
+    }
 
 }
 function checkModal(){
@@ -493,16 +489,9 @@ function checkLogo(){
     console.log("Logo: "+logo);
 
     var imgElement = $("body").find("#logo-img");
-    if (logo == "https://seeklogo.com/images/D/drone-logo-9D3EF64845-seeklogo.com.png"){
-        imgElement.attr("src",logo);
-        //imgElement.attr("width","40");
-        imgElement.attr("height","30");
-        }
-    else {
-        imgElement.attr("src",logo);
-        //imgElement.attr("width","114");
-        imgElement.attr("height","30");
-    }
+    imgElement.attr("src",logo);
+    imgElement.attr("height","30");
+}
 
 
 }
@@ -527,6 +516,7 @@ function checkDashboard(){
 
     if (dashboardArray.includes("Messages")){
         let randomMessages = Math.floor(Math.random() * (100 - 1) + 1);
+        console.log(randomMessages);
         dashboardElement.find("#Messages").attr("style","display: visibility;");
     }
     else{
@@ -534,6 +524,7 @@ function checkDashboard(){
     }
     if (dashboardArray.includes("Balance")){
         let randomBalance = Math.floor(Math.random() * (100000 - 1000) + 1000);
+        console.log(randomBalance);
         dashboardElement.find("#Balance").attr("style","display: visibility;");
     }
     else{
@@ -541,6 +532,7 @@ function checkDashboard(){
         }
     if (dashboardArray.includes("Loan")){
         let randomLoan = Math.floor(Math.random() * (10000 - 1000) + 1000);
+        console.log(randomLoan);
         dashboardElement.find("#Loan").attr("style","display: visibility;");
     }
     else{
@@ -548,6 +540,7 @@ function checkDashboard(){
         }
     if (dashboardArray.includes("Bills")){
         let randomBills = Math.floor(Math.random() * (20 - 1) + 1);
+        console.log(randomBills);
         dashboardElement.find("#Bills").attr("style","display: visibility;");
     }
     else{
