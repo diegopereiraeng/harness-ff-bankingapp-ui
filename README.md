@@ -38,11 +38,13 @@ Type: Boolean
 			console.log("Setting Maintenance: "+maintenance)
 			siteElement.attr("style","display: none;");
 			maintenanceElement.attr("style","display: visibility;");
+			$("body").find("#scrolling-partners-section").attr("style","display: none;");
 		}
 		else{
 			siteElement.attr("style","display: visibility;");
 			$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
 			maintenanceElement.attr("style","display: none;");
+			$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
 		}
 
 	}
