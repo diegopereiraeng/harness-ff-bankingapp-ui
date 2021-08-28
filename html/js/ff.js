@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-    '44e3ffcb-3a5e-4af1-a7f3-ba7a51cbc74b',
+    '54c8d7b3-1833-4b69-8f07-6a0c3c3cd95b',
     target
 );
 
@@ -107,12 +107,23 @@ var ckoStatus = false
 /* START FEATURE FLAGS FUNCTIONS */
 
 
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
+function Home_Maintenance(maintenance) {
+
+	var siteElement = $("body").find(".site");
+	var maintenanceElement = $("body").find("#maintenance");
+	console.log("Maintenance: "+maintenance)
+
+	if ( maintenance == 'true'){
+		console.log("Setting Maintenance: "+maintenance)
+		siteElement.attr("style","display: none;");
+		maintenanceElement.attr("style","display: visibility;");
+	}
+	else{
+		siteElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+	}
+
+}
 
 
 
