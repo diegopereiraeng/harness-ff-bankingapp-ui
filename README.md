@@ -43,7 +43,7 @@ Type: Boolean
 			siteElement.attr("style","display: visibility;");
 			$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
 		}
-		maintenanceElement.attr("style","display: none;");
+
 	}
 
 ### CHANGE LOGO IMAGE
