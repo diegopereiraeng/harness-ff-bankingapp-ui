@@ -9,9 +9,9 @@
 
 1 - edit the [ff.js](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/js/ff.js) file and search for ----> ADD Your FEATURES HERE <--------
 
-2 - Add one or more feature below to this part of the code
+2 - Change the FF key using your FF key and Add one or more feature below to this part of the code
 
-3 - Create a Pull Request using your FF key as Title of this Pull Request.
+3 - Create a Pull Request.
 
 4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
 ex: http://34.121.70.58/Your-Github-User/index.html
