@@ -7,9 +7,11 @@
   
 #### Create the flags and add them to code:
 
-1 - edit the [ff.js](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/js/ff.js) file and search for ----> ADD Your FEATURES HERE <--------
+1 - edit the [ff.js](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/js/ff.js) file and search for 
+  a(FF Key) "UPDATE THE FF SDK KEY HERE"
+  b(Features) ----> ADD Your FEATURES HERE <--------
 
-2 - Change the FF key using your FF key and Add one or more feature below to this part of the code
+2 - Change the FF key using your own FF key and Add one or more feature below to this part of the code
 
 3 - Create a Pull Request.
 
