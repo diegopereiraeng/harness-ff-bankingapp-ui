@@ -114,6 +114,11 @@ var ckoStatus = false
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
 
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
 
 
 /* END FEATURE FLAGS FUNCTIONS */
