@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-    '44e3ffcb-3a5e-4af1-a7f3-ba7a51cbc74b',
+    '779d5c51-90a4-4f49-8493-588938909ab1',
      // ^^ UPDATE THE FF SDK KEY HERE ^^ //
     target
 );
@@ -106,15 +106,11 @@ var ckoStatus = false
 
 /* START FEATURE FLAGS FUNCTIONS */
 
-
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-
-
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
 
 /* END FEATURE FLAGS FUNCTIONS */
     
