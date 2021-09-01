@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-    '44e3ffcb-3a5e-4af1-a7f3-ba7a51cbc74b',
+    '2ba29ae5-bbe7-4b2a-ad27-2c404731cba1',
      // ^^ UPDATE THE FF SDK KEY HERE ^^ //
     target
 );
@@ -114,7 +114,32 @@ var ckoStatus = false
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
 
+function ALL_YOUTUBE_MODAL(flag) {
+	if ( flag != "off" && (youtubeStatus != flag) ){
+		console.log("Youtube:"+flag)
+		var btModal = $("body").find("#youtubebtn");
 
+		$('.video-btn').attr("data-src","https://www.youtube.com/embed/"+flag);
+		$('#youtubeID').attr("src","https://www.youtube.com/embed/"+flag+"?modestbranding=1&amp;showinfo=0?start=2");
+		
+		if (youtubeStatus == 'off') {
+			//btModal.click();
+			$("#youtubeModal").modal('show');
+		}
+		youtubeStatus = flag
+		}else{
+			if (flag == 'off' && youtubeStatus != flag){
+				youtubeStatus = flag
+				try{
+					$("#youtubeModal").modal('hide');
+					$('#youtubeID').attr("src","");
+				}catch(e){
+					console.log(e)
+				}
+			}
+	}
+
+}
 
 /* END FEATURE FLAGS FUNCTIONS */
     
