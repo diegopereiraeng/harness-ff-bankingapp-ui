@@ -106,6 +106,134 @@ var ckoStatus = false
 
 /* START FEATURE FLAGS FUNCTIONS */
 
+function Home_Maintenance(maintenance) {
+
+	var siteElement = $("body").find(".site");
+	var maintenanceElement = $("body").find("#maintenance");
+	console.log("Maintenance: "+maintenance)
+
+	if ( maintenance == 'true'){
+		console.log("Setting Maintenance: "+maintenance)
+		siteElement.attr("style","display: none;");
+		maintenanceElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: none;");
+	}
+	else{
+		siteElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+		maintenanceElement.attr("style","display: none;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+	}
+
+}
+
+
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
+
+
+function ALL_ALERT_MODAL(flag) {
+	var title
+	var message
+	var type
+	var enabled
+
+	try{
+	var Array = flag.split('|');
+	enabled = Array[0];
+	type = Array[1];
+	title = Array[2];
+	message = Array[3];
+	console.log("title : "+title);
+	console.log("type : "+type);
+	console.log("message : "+message);
+}
+catch{
+	alertArray = flag;
+	enabled = flag
+}
+console.log("ALL_ALERT_MODAL: "+flag);
+console.log("ALL_ALERT_MODAL Enabled: "+enabled);
+
+if ( enabled != "off" && (modalStatus != enabled || modalStatusMessage != message)){
+	modalStatus = enabled
+	modalStatusMessage = message
+
+	var btModal = $("body").find("#modalButton");
+
+	$("body").find("#ModalMessage").text(message);
+	$("body").find("#modalTitle").text(title);
+	$("body").find("#iconModal").text("")
+
+	if (type == "error"){
+		$("body").find("#iconModal").append("&#xE5CD;");
+		document.documentElement.style.setProperty("--modal-color", "#ef513a");
+		document.documentElement.style.setProperty("--modal-roll-color", "#da2c12");
+	}
+	else
+	{
+		$("body").find("#iconModal").append("&#xE876;");
+		document.documentElement.style.setProperty("--modal-color", "#82ce34");
+		document.documentElement.style.setProperty("--modal-roll-color", "#6fb32b");
+	}
+
+	btModal.click();
+
+}else{
+	if (enabled == 'off' && modalStatus != enabled){
+		modalStatus = enabled
+		modalStatusMessage = ""
+	}
+
+	try{
+		$("body").find("#btnModalOk").click();
+	}catch(e){
+		console.log(e)
+	}
+	}
+}
+
+
+function ALL_YOUTUBE_MODAL(flag) {
+	if ( flag != "off" && (youtubeStatus != flag) ){
+		console.log("Youtube:"+flag)
+		var btModal = $("body").find("#youtubebtn");
+
+		$('.video-btn').attr("data-src","https://www.youtube.com/embed/"+flag);
+		$('#youtubeID').attr("src","https://www.youtube.com/embed/"+flag+"?modestbranding=1&amp;showinfo=0?start=2");
+		
+		if (youtubeStatus == 'off') {
+			//btModal.click();
+			$("#youtubeModal").modal('show');
+		}
+		youtubeStatus = flag
+		}else{
+			if (flag == 'off' && youtubeStatus != flag){
+				youtubeStatus = flag
+				try{
+					$("#youtubeModal").modal('hide');
+					$('#youtubeID').attr("src","");
+				}catch(e){
+					console.log(e)
+				}
+			}
+	}
+
+}
+
+
+function Home_Banner(flag) {
+	checkBanner();
+}
+
+
+function Home_Header_Name(flag) {
+	checkHeader();
+}
+
 
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
