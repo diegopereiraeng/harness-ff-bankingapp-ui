@@ -12,7 +12,6 @@ const cf = initialize(
     target
 );
 
-
 function getTarget(){
     var targetObj
     if(typeof(Storage) !== "undefined"){
