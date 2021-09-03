@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-    '44e3ffcb-3a5e-4af1-a7f3-ba7a51cbc74b',
+    'de718fc3-e314-473b-82cf-ae0087b72fb1',
      // ^^ UPDATE THE FF SDK KEY HERE ^^ //
     target
 );
@@ -106,13 +106,27 @@ var ckoStatus = false
 
 /* START FEATURE FLAGS FUNCTIONS */
 
+function Home_Maintenance(maintenance) {
 
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
+	var siteElement = $("body").find(".site");
+	var maintenanceElement = $("body").find("#maintenance");
+	console.log("Maintenance: "+maintenance)
+
+	if ( maintenance == 'true'){
+		console.log("Setting Maintenance: "+maintenance)
+		siteElement.attr("style","display: none;");
+		maintenanceElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: none;");
+	}
+	else{
+		siteElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+		maintenanceElement.attr("style","display: none;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+	}
+
+}
+
 
 
 
