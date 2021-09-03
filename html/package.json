@@ -1,0 +1,16 @@
+{
+  "name": "harness-ff-bankingapp-ui",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js ./ --format junit --output-file ./reports/eslint/eslint.xml",
+    "lint:fix": "npm run lint -- --fix",
+    "coverage": "echo \"running coverage test!!\"",
+    "coverage:drone": "npm run coverage"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-plugin-react": "^7.24.0",
+    "lint": "^0.7.0"
+  }
+}
