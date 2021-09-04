@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js ./html --format junit --output-file ./html/reports/eslint/eslint.xml",
+    "lint": "eslint --ext .js html --config eslintrc.json --format junit --output-file html/reports/eslint/eslint.xml",
     "lint:fix": "npm run lint -- --fix",
     "coverage": "echo \"running coverage test!!\"",
     "coverage:drone": "npm run coverage"

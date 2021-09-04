@@ -88,7 +88,16 @@ function checkAddUsers(){
         }
     });*/
 
-    namey.get({ with_surname: true, callback: function(user) { console.log(user);console.log(typeof(user)); for (const [key, value] of Object.entries(user)) {console.log(`${value}`); ;window.localStorage.setItem('harnessDemoUser', `${value}` ) };  }}); ;
+    namey.get({ 
+        with_surname: true, 
+        callback: function(user) { 
+            console.log(user);
+            console.log(typeof(user)); 
+            for (const [key, value] of Object.entries(user)) {
+                console.log(`${value}`); 
+                window.localStorage.setItem('harnessDemoUser', `${value}` ) 
+            }
+        }});
     console.log(users);
 
 

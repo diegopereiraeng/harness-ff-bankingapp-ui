@@ -1,4 +1,6 @@
+/* eslint-disable no-alert, no-console */
 import { initialize, Event } from 'https://unpkg.com/@harnessio/ff-javascript-client-sdk@1.4.7/dist/sdk.client.js'
+/* eslint-enable no-alert, no-console */
 
 var target = getTarget()
 var menuStyle = ''
