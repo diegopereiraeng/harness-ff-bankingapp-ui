@@ -100,16 +100,13 @@ function checkAddUsers(){
         }});
     console.log(users);
 
-
     console.log("typeOf: "+typeof(users));
 
     let name = window.localStorage.harnessDemoUser;
     console.log("Name: "+name);
 
-
     var newUser = $("body").find("#user-box").clone();
     let randomIdUser = Math.floor(Math.random() * 10);
-
 
     var myUser = new Object();
     myUser.name = name;
