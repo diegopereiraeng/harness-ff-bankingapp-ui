@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/home_test.js">
+<testcase time="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/home_test.js" classname="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/home_test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="1" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/ff.js">
+<testcase time="0" name="org.eslint.unknown" classname="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/ff"><error message="Parsing error: &apos;import&apos; and &apos;export&apos; may appear only with &apos;sourceType: module&apos;"><![CDATA[line 1, col 1, Error - Parsing error: &apos;import&apos; and &apos;export&apos; may appear only with &apos;sourceType: module&apos;]]></error></testcase>
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/fontawesome.js">
+<testcase time="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/fontawesome.js" classname="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/fontawesome" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/home.js">
+<testcase time="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/home.js" classname="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/home" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/loan.js">
+<testcase time="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/loan.js" classname="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/loan" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/page.js">
+<testcase time="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/page.js" classname="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/page" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/youtube.js">
+<testcase time="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/youtube.js" classname="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/js/youtube" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/seguros.js">
+<testcase time="0" name="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/seguros.js" classname="/Users/diegopereira/Documents/Development/git/harness-ff-bankingapp-ui/html/seguros" />
+</testsuite>
+</testsuites>
