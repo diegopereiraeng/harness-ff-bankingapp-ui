@@ -543,7 +543,6 @@ function checkMaintenance(){
     if (maintenance){
         siteElement.attr("style","display: none;");
         maintenanceElement.attr("style","display: visibility;");
-
     }
     else{
         siteElement.attr("style","display: visibility;");
