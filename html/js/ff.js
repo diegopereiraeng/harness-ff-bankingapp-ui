@@ -591,7 +591,6 @@ cf.on(Event.CHANGED, flagInfo => {
         console.log(e)
     }
     console.log("FF is Awesome");
-
     if (flagInfo.deleted) {
         console.log('Flag'+flagInfo.flag+' is deleted');
         //log(JSON.stringify(flagInfo, null, 2))
@@ -609,7 +608,5 @@ cf.on(Event.ERROR, error => {
     cf.close();
     // Event happens when connection some error has occurred
 })
-
-
 
 /* End Feature Flags EVENTS */
