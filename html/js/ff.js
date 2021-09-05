@@ -549,7 +549,6 @@ function checkMaintenance(){
         maintenanceElement.attr("style","display: none;");
         $("body").find("#scrolling-partners-section").attr("style","display: visibility;");
     }
-
 }
 
 /* End Harness HOME FF */
@@ -558,7 +557,6 @@ function checkMaintenance(){
 
 cf.on(Event.READY, flags => {
     console.log("FLAGS:"+JSON.stringify(flags, null, 2));
-
     for (const [key, value] of Object.entries(flags)) {
         console.log(key);
         console.log(value);
@@ -570,9 +568,7 @@ cf.on(Event.READY, flags => {
         catch(e){
             console.log(e)
         }
-
     }
-
 });
 
 /* End Logic to call dynamically Feature Flags methods using their own names */
