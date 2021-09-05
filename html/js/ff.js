@@ -119,7 +119,6 @@ function refresh() {
     if (window.location.href.indexOf("home_new.html") > -1) {
         checkDashboard();
         checkMenu();
-
     }
     if (window.location.href.indexOf("index.html") > -1) {
         checkGuest();
