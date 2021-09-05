@@ -519,8 +519,6 @@ function checkDashboard(){
     else{
         dashboardElement.find("#Bills").attr("style","display: none;");
     }
-
-
 }
 
 function checkBanner(){
