@@ -155,6 +155,7 @@ function checkGuest(){
         }
     }
 }
+
 /* Submit interception  */
 
 function processLogin(e) {
