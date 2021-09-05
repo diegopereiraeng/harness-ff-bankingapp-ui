@@ -127,7 +127,6 @@ function refresh() {
     checkBanner();
     checkLogo();
     checkHeader();
-
     refreshNum++;
     first++
 }
