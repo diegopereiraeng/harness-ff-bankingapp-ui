@@ -1,6 +1,5 @@
 import { initialize, Event } from 'https://unpkg.com/@harnessio/ff-javascript-client-sdk@1.4.7/dist/sdk.client.js'
 
-
 var target = getTarget()
 var menuStyle = ''
 var menuSelectedStyle= 'w3-blue'
@@ -13,11 +12,9 @@ const cf = initialize(
     target
 );
 
-
 function getTarget(){
     var targetObj
     if(typeof(Storage) !== "undefined"){
-
         if((typeof(window.localStorage.harnessDemoSignUpEmail) !== "undefined") && typeof(window.localStorage.harnessDemoCompany) !== "undefined"){
             if (window.location.href.indexOf("index.html") > -1) {
                 targetObj = {
@@ -43,8 +40,6 @@ function getTarget(){
                     }
                     menuStyle = 'new_menu'
                 }
-            
-            
             }
             else{
                 var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
@@ -58,11 +53,9 @@ function getTarget(){
                     }
                 }
             }
-            
             var welcome = $("body").find("#Welcome")
             welcome.text("");
             welcome.append("Welcome, <br><strong>"+window.localStorage.harnessDemoSignUpName+"</strong>")
-
         }
         else{
             targetObj = {
@@ -114,7 +107,6 @@ var ckoStatus = false
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
-
 
 
 /* END FEATURE FLAGS FUNCTIONS */
