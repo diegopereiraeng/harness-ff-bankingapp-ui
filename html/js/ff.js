@@ -533,7 +533,6 @@ function checkBanner(){
     else{
         dashboardElement.attr("style","display: none;");
     }
-
 }
 function checkMaintenance(){
     var maintenance = cf.variation('Home_Maintenance', true) // second argument is default value when variation does not ex
