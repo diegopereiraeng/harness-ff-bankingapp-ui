@@ -154,7 +154,6 @@ function checkGuest(){
             console.log(error);
         }
     }
-
 }
 
 /* Submit interception  */
