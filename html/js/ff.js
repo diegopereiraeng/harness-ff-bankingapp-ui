@@ -198,9 +198,7 @@ function processSignUp(e) {
 
     $("body").find("#login-email").val(harnessDemoSignUpEmail)
     $("body").find("#login-company").val(harnessDemoSignUpCompany)
-
     $("body").find(".switcher-login").click();
-    /* do what you want with the form */
     // You must return false to prevent the default form behavior
     return false;
 }
@@ -222,20 +220,16 @@ if (window.location.href.indexOf("index.html") > -1) {
     }
     /* Switcher */
     const switchers = [...document.querySelectorAll('.switcher')]
-
     switchers.forEach(item => {
         item.addEventListener('click', function() {
             switchers.forEach(item1 => item1.parentElement.classList.remove('is-active'))
             this.parentElement.classList.add('is-active')
         })
     })
-
 }
-
 /* End submit interception */
 
 /* Intercep Resize */
-
 function resizeIframe(){
     let iframe = document.querySelector("#iframeContent");
 
@@ -273,10 +267,8 @@ function showMenuContent(site,name,id){
         $(this).removeClass(menuSelectedStyle);
         $(this).removeClass("active");
     }); 
-
     console.log("Adding Class" + "#"+id+" to site:"+id.val())
     //Add the clicked button class
-
     id.addClass(menuSelected);
     id.addClass("active");
     menuSelectedStyle=menuSelected
@@ -309,8 +301,6 @@ function checkSiteColor(){
     var textColor = cf.variation('Text_Color_Mode', '#222')
     var homeBodyText = cf.variation('Home_Body_Text_Color', '#000')
 
-
-
     console.log("Site Color: "+color+" - Text Color: "+textColor);
     if (window.location.href.indexOf("home_new.html") > -1) {
         var homeBody = cf.variation('Home_Body_Color', '#F8F8FF')
@@ -329,8 +319,6 @@ function checkSiteColor(){
         document.querySelector("#header-container").style.setProperty("--main-text-color", textColor);
         document.querySelector("body").style.setProperty("--main-Itext-color", homeBodyText);
     }
-
-
 }
 
 function checkMenu(){
@@ -469,12 +457,9 @@ function checkModal(){
             $("body").find("#iconModal").append("&#xE876;");
             document.documentElement.style.setProperty("--modal-color", "#82ce34");
             document.documentElement.style.setProperty("--modal-roll-color", "#6fb32b");
-
         }
     }
-
 }
-
 
 function checkLogo(){
     var logo = cf.variation('Home_Logo', "https://harness.io/wp-content/themes/harnessio/assets/images/harness-logo.svg")
@@ -485,8 +470,6 @@ function checkLogo(){
     imgElement.attr("height","30");
 }
 
-
-
 function checkHeader(){
     var header = cf.variation('Home_Header_Name', "Banking App")
     console.log("Header: "+header);
@@ -494,8 +477,6 @@ function checkHeader(){
     var headerElement = $("body").find("#titulo")
     headerElement.text("")
     headerElement.append(header);
-
-
 
 }
 function checkDashboard(){
