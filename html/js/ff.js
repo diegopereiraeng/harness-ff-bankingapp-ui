@@ -111,7 +111,6 @@ var ckoStatus = false
 
 /* END FEATURE FLAGS FUNCTIONS */
     
-
 var refreshNum=0
 function refresh() {
     console.log("Refresh No: "+refreshNum);
