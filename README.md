@@ -1,6 +1,5 @@
 # FF Banking App UI
 
-
 ## FF LAB
 
 #### Create the flags and add them to code:
@@ -9,7 +8,7 @@
 
   a(FF Key):
   
-  "UPDATE THE FF SDK KEY HERE"
+  "UPDATE THE FF SDK KEY HERE" 
 
   b(Features):
   
