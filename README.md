@@ -9,7 +9,7 @@
 
   a(FF Key):
   
-  "UPDATE THE FF SDK KEY HERE" 
+  "UPDATE THE FF SDK KEY HERE"
 
   b(Features):
   
