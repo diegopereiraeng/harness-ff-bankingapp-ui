@@ -19,7 +19,7 @@
 
 2 - Change the FF key using your own FF key and Add one or more feature below to this part of the code
 
-3 - Create a Pull Request.
+3 - Create a Pull Request to the branch dev and follow the git flow: pr to dev -> pr to qa -> pr to prod.
 
 4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
 ex: http://34.121.70.58/Your-Github-User/index.html
