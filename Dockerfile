@@ -14,7 +14,6 @@ COPY scripts /opt/scripts
 RUN chmod +x /opt/scripts/*.sh
 
 
-
 CMD bash -c ' \
   /opt/scripts/process_page_js.sh /usr/share/nginx/html/page.js; \
   nginx -c /etc/nginx/nginx.conf -g "daemon off;";'
