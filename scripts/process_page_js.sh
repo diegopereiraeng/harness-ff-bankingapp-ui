@@ -1,5 +1,7 @@
 #!/bin/bash
 
+if [ -z ${FFKEY+x} ]; then echo "FF KEY is unset"; else echo "FF KEY set to $FFKEY";sed -i -r "s/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+/$FFKEY/g" /usr/share/nginx/html/js/ff.js; fi;
+
 if [[ "" == "$LOG_CONFIG_LABELS" ]]; then
   LOG_CONFIG_LABELS={}
 fi
@@ -18,5 +20,3 @@ const LOG_CONFIG_LABELS = $LOG_CONFIG_LABELS;
 
 const METRIC_CONFIG_LABELS = $METRIC_CONFIG_LABELS;
 EOF
-
-echo -e "$(cat $tmpfile)\n\n$(cat $1)" > $1
