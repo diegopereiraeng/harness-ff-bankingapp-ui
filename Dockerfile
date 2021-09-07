@@ -5,7 +5,7 @@ ARG FFKEY
 
 COPY html /usr/share/nginx/html/
 
-#RUN sed -i -r "s/44e3ffcb-3a5e-4af1-a7f3-ba7a51cbc74b/${FFKEY}/g" /usr/share/nginx/html/js/ff.js
+RUN sed -i -r "s/eae200d6-fec2-4352-9227-927a67df73ea/${FFKEY}/g" /usr/share/nginx/html/js/ff.js
 CMD bash -c 'cat /usr/share/nginx/html/js/ff.js'
 
 
@@ -17,4 +17,5 @@ RUN chmod +x /opt/scripts/*.sh
 
 CMD bash -c ' \
   /opt/scripts/process_page_js.sh /usr/share/nginx/html/page.js; \
+  if [ -z ${FFKEY+x} ]; then echo "FF KEY is unset"; else sed -i -r "s/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+/${FFKEY}/g" /usr/share/nginx/html/js/ff.js; fi; \
   nginx -c /etc/nginx/nginx.conf -g "daemon off;";'
