@@ -23,7 +23,7 @@ ex: http://34.121.70.58/Your-Github-User/index.html
 
 5 - Create the flags using the same name of functions below.
 
-ex: function Home_Maintenance(maintenance) {
+ex: function Home_Maintenance(maintenance)...
 flag will be "Home_Maintenance"
 
 ### ENABLE OR DISABLE MAINTENANCE MODE
