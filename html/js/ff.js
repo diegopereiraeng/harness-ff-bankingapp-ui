@@ -100,6 +100,52 @@ var ckoStatus = false
 
 /* START FEATURE FLAGS FUNCTIONS */
 
+function ALL_YOUTUBE_MODAL(flag) {
+	if ( flag != "off" && (youtubeStatus != flag) ){
+		console.log("Youtube:"+flag)
+		var btModal = $("body").find("#youtubebtn");
+
+		$('.video-btn').attr("data-src","https://www.youtube.com/embed/"+flag);
+		$('#youtubeID').attr("src","https://www.youtube.com/embed/"+flag+"?modestbranding=1&amp;showinfo=0?start=2");
+		
+		if (youtubeStatus == 'off') {
+			//btModal.click();
+			$("#youtubeModal").modal('show');
+		}
+		youtubeStatus = flag
+		}else{
+			if (flag == 'off' && youtubeStatus != flag){
+				youtubeStatus = flag
+				try{
+					$("#youtubeModal").modal('hide');
+					$('#youtubeID').attr("src","");
+				}catch(e){
+					console.log(e)
+				}
+			}
+	}
+
+}
+function Home_Maintenance(maintenance) {
+
+	var siteElement = $("body").find(".site");
+	var maintenanceElement = $("body").find("#maintenance");
+	console.log("Maintenance: "+maintenance)
+
+	if ( maintenance == 'true'){
+		console.log("Setting Maintenance: "+maintenance)
+		siteElement.attr("style","display: none;");
+		maintenanceElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: none;");
+	}
+	else{
+		siteElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+		maintenanceElement.attr("style","display: none;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+	}
+
+}
 
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
