@@ -126,6 +126,26 @@ function ALL_YOUTUBE_MODAL(flag) {
 	}
 
 }
+function Home_Maintenance(maintenance) {
+
+	var siteElement = $("body").find(".site");
+	var maintenanceElement = $("body").find("#maintenance");
+	console.log("Maintenance: "+maintenance)
+
+	if ( maintenance == 'true'){
+		console.log("Setting Maintenance: "+maintenance)
+		siteElement.attr("style","display: none;");
+		maintenanceElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: none;");
+	}
+	else{
+		siteElement.attr("style","display: visibility;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+		maintenanceElement.attr("style","display: none;");
+		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+	}
+
+}
 
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
