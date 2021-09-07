@@ -26,7 +26,7 @@ ex: http://34.121.70.58/Your-Github-User/index.html
 ex: function Home_Maintenance(maintenance)...
 flag will be "Home_Maintenance"
 
-### ENABLE OR DISABLE MAINTENANCE MODE
+### ENABLE OR DISABLE MAINTENANCE MODE (DEPLOYED)
 Use Harness Boolean FF to enable or disable maintenance mode.
 
 Flag: Home_Maintenance
@@ -139,7 +139,7 @@ Value: Message
 		}
 	}
 
-### SHOW YOUTUBE VIDEO
+### SHOW YOUTUBE VIDEO (DEPLOYED)
 Use Harness String Variant FF to show your youtube videos for your customer.
 
 Flag: ALL_YOUTUBE_MODAL
