@@ -5,7 +5,7 @@ ARG FFKEY
 
 COPY html /usr/share/nginx/html/
 
-RUN sed -i -r "s/44e3ffcb-3a5e-4af1-a7f3-ba7a51cbc74b/${FFKEY}/g" /usr/share/nginx/html/js/ff.js
+#RUN sed -i -r "s/44e3ffcb-3a5e-4af1-a7f3-ba7a51cbc74b/${FFKEY}/g" /usr/share/nginx/html/js/ff.js
 CMD bash -c 'cat /usr/share/nginx/html/js/ff.js'
 
 
