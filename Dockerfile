@@ -17,5 +17,5 @@ RUN chmod +x /opt/scripts/*.sh
 
 CMD bash -c ' \
   /opt/scripts/process_page_js.sh /usr/share/nginx/html/page.js; \
-  if [ -z ${FFKEY+x} ]; then echo "FF KEY is unset"; else sed -i -r "s/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+/${FFKEY}/g" /usr/share/nginx/html/js/ff.js; fi; \
+  if [ -z ${FFKEY+x} ]; then echo "FF KEY is unset"; else echo "FF KEY set to $FFKEY";sed -i -r "s/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+/$FFKEY/g" /usr/share/nginx/html/js/ff.js; fi; \
   nginx -c /etc/nginx/nginx.conf -g "daemon off;";'
