@@ -20,5 +20,3 @@ const LOG_CONFIG_LABELS = $LOG_CONFIG_LABELS;
 
 const METRIC_CONFIG_LABELS = $METRIC_CONFIG_LABELS;
 EOF
-
-echo -e "$(cat $tmpfile)\n\n$(cat $1)" > $1
