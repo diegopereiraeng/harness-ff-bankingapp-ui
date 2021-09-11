@@ -8,14 +8,14 @@ Please, before doing any of the Demos
 1 - edit the [index.hml](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/index.html) file and search for:
 ex:
 
-	a - <title>Harness FF Demo</title>
+	a - <title>Harness Demo</title>
 
 	b - <div id="titulo" class="titulo">
-		Banking app
+		Harness Banking
 	    </div>
 
 	c - <div id="logo" class="logo">
-	        <img id="logo-img" src="https://elektra.vtexassets.com/assets/vtex/assets-builder/elektra.store-theme/0.1.282/icn-logo-elektra___be2d09c389ec7e53c29f15cc1c480853.svg" height=40 ">
+	        <img id="logo-img" src="https://harness.io/wp-content/themes/harnessio/assets/images/harness-logo.svg" height=40 ">
 	    </div>
 
 2 - Save as new Branch
