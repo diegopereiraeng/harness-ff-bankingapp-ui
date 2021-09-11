@@ -7,10 +7,10 @@ COPY html /usr/share/nginx/html/
 
 RUN sed -i -r "s/eae200d6-fec2-4352-9227-927a67df73ea/${FFKEY}/g" /usr/share/nginx/html/js/ff.js
 
-RUN bash -c 'cat /usr/share/nginx/html/js/ff.js'
+CMD bash -c 'cat /usr/share/nginx/html/js/ff.js'
 
 
-COPY scripts/nginx.conf /etc/nginx/nginx.conf
+CMD bash -c 'cat scripts/nginx.conf >> /etc/nginx/nginx.conf'
 COPY scripts /opt/scripts
 RUN chmod +x /opt/scripts/*.sh
 
