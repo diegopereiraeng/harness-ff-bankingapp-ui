@@ -1,6 +1,32 @@
 # FF Banking App UI
 
-## FF LAB
+Please, before doing any of the Demos
+
+
+## BRANCH FEATURES Demo/LAB
+
+1 - edit the [index.hml](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/index.html) file and search for:
+ex:
+
+	a - <title>Harness FF Demo</title>
+
+	b - <div id="titulo" class="titulo">
+		Banking app
+	    </div>
+
+	c - <div id="logo" class="logo">
+	        <img id="logo-img" src="https://elektra.vtexassets.com/assets/vtex/assets-builder/elektra.store-theme/0.1.282/icn-logo-elektra___be2d09c389ec7e53c29f15cc1c480853.svg" height=40 ">
+	    </div>
+
+2 - Save as new Branch
+3 - Create a Pull Request to Dev
+4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
+ex: http://34.121.70.58/Your-Github-User/index.html
+
+Thanks!
+
+
+## FF DEMO/LAB
 
 #### Create the flags and add them to code:
 
@@ -16,7 +42,7 @@
 
 2 - Change the FF key using your own FF key and Add one or more feature below to this part of the code
 
-3 - Create a Pull Request to the branch dev and follow the git flow: pr to dev -> pr to qa -> pr to prod.
+3 - Create a Pull Request to the branch dev.
 
 4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
 ex: http://34.121.70.58/Your-Github-User/index.html
