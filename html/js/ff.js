@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-    'eae200d6-fec2-4352-9227-927a67df73ea',
+    '0496ac38-1f7e-4112-ac5b-50eb6159b318',
      // ^^ UPDATE THE FF SDK KEY HERE ^^ //
     target
 );
@@ -146,6 +146,13 @@ function Home_Maintenance(maintenance) {
 	}
 
 }
+
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
+
 
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
