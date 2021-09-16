@@ -26,11 +26,5 @@ $('#youtubeModal').on('hide.bs.modal', function (e) {
 })
 
 
-
-
-
-
 // document ready
 });
-
-
