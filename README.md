@@ -32,13 +32,13 @@ Thanks!
 
 1 - edit the [ff.js](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/js/ff.js) file and search for:
 
-  a(FF Key):
-  
-  "UPDATE THE FF SDK KEY HERE" 
+a(FF Key):
 
-  b(Features):
-  
-  ----> ADD Your FEATURES HERE <--------
+"UPDATE THE FF SDK KEY HERE"
+
+b(Features):
+
+----> ADD Your FEATURES HERE <--------
 
 2 - Change the FF key using your own FF key and Add one or more feature below to this part of the code
 
@@ -94,7 +94,7 @@ Value: logo url - ex: http://site.com/image.png
 		imgElement.attr("height","70");
 		imgElement.attr("src",logo);
 	}
-  
+
 ### SEND MESSAGE TO CUSTOMER
 Use Harness String Variant FF to send different messages for your customer.
 
@@ -245,7 +245,7 @@ FUNCTIO:
 	}
 
 ## Colors Features
-	
+
 ### CHANGE HOME BODY COLOR
 Use Harness String Variant  FF to change body color.
 
@@ -258,7 +258,7 @@ Value: html color code or main color names
 	function Home_Body_Color(flag) {
 		checkSiteColor();
 	}
-	
+
 ### CHANGE HOME BODY TEXT COLOR
 Use Harness String Variant  FF to change all text color.
 
