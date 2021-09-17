@@ -100,32 +100,6 @@ var ckoStatus = false
 
 /* START FEATURE FLAGS FUNCTIONS */
 
-function ALL_YOUTUBE_MODAL(flag) {
-	if ( flag != "off" && (youtubeStatus != flag) ){
-		console.log("Youtube:"+flag)
-		var btModal = $("body").find("#youtubebtn");
-
-		$('.video-btn').attr("data-src","https://www.youtube.com/embed/"+flag);
-		$('#youtubeID').attr("src","https://www.youtube.com/embed/"+flag+"?modestbranding=1&amp;showinfo=0?start=2");
-		
-		if (youtubeStatus == 'off') {
-			//btModal.click();
-			$("#youtubeModal").modal('show');
-		}
-		youtubeStatus = flag
-		}else{
-			if (flag == 'off' && youtubeStatus != flag){
-				youtubeStatus = flag
-				try{
-					$("#youtubeModal").modal('hide');
-					$('#youtubeID').attr("src","");
-				}catch(e){
-					console.log(e)
-				}
-			}
-	}
-
-}
 function Home_Maintenance(maintenance) {
 
 	var siteElement = $("body").find(".site");
@@ -146,7 +120,20 @@ function Home_Maintenance(maintenance) {
 	}
 
 }
-
+function Index_SignUp_Enable(flag){
+    if (flag == 'off') {
+        $('#signupForm').attr("style","display: none;");
+        $('#login').attr("style","margin-left: -170px;");
+        $('.switcher-login').attr("style","margin-left: -70px;");
+        $('.switcher-signup').prop('disabled', true);
+    }
+    else{
+        $('#signupForm').attr("style","display: visibility;");
+        $('.switcher-signup').prop('disabled', false);
+        $('#login').attr("style","");
+        $('.switcher-login').attr("style","");
+    }
+}
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
