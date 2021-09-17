@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Harness Feature Flags Demo</title>
+    <title>Harness FF Demo</title>
     <meta charset="UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZD3111HXJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-ZZD3111HXJ');
+    </script>
+    <script src="./js/appdynamics.js" charset="UTF-8" type="text/javascript"></script>
+    <script src="//cdn.appdynamics.com/adrum/adrum-21.4.0.3405.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="./seguros.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="./js/home.js"></script>
     <script type="module" src="./js/ff.js"></script>
     <link href="./seguros.css" type="text/css" rel="stylesheet"/>
-
     <link href="./maintenance.css" type="text/css" rel="stylesheet"/>
+    <!-- Banner Harness Customers -->
+    <link rel="icon" href="http://harness.io/favicon.ico">
+    <link rel="preload" href="http://harness.io/_next/static/css/188939d7872d14a389aa.css" as="style">
+    <link rel="stylesheet" href="http://harness.io/_next/static/css/188939d7872d14a389aa.css" data-n-g="">
+    <link rel="preload" href="http://harness.io/_next/static/css/2176213be4f33ba4a471.css" as="style">
+    <link rel="stylesheet" href="http://harness.io/_next/static/css/2176213be4f33ba4a471.css" data-n-p="">
+    <link rel="stylesheet" href="./harness-banner.css" data-n-p="">
+    <!-- End Banner Harness Customers -->
 
     <!-- Modal -->
     <link href="./alert.css" type="text/css" rel="stylesheet"/>
@@ -32,8 +50,8 @@
 <!-- Button trigger Youtube modal -->
 <div style="display:none;">
     <!-- Button trigger Youtube modal -->
-    <button id="youtubebtn" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/VSHVo9jHMAk" data-target="#youtubeModal" style="display:none;"></button>
-
+    <button id="youtubebtn" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/VSHVo9jHMAk" data-target="#youtubeModal" style="display:none;">
+    </button>
 </div>
 <!-- Button HTML (to Trigger Modal) -->
 <a id="modalButton" href="#myModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
@@ -46,7 +64,7 @@
 </div>
 
 <!-- Maitenance Mode -->
-<div id="maintenance" class="maintenance" style="display: none;">
+<div id="maintenance" style="display: none;">
     <div id="error">
         <div id="box"></div>
         <h3>Site under Maintenance</h3>
@@ -58,82 +76,134 @@
 <div id="qrcode-menu">
     <nav class="w3-sidebar w3-collapse harness-wildcard" style="z-index:3;width:100%;display: none;" id="Sidebar"><br>
         <div id="qrcode" class="logo">
-            <img id="qrcode-img" src="./images/qrcode.png" height="600" > <!--width="114"-->
+            <img alt="QR Code" id="qrcode-img" src="./images/qr-code2.svg" height="600" > <!--width="114"-->
         </div>
     </nav>
 </div>
 <!-- Top container -->
-<div id="site"  class="site" style="display: visibility;">
+<div id="site"  class="site" style="display: none;">
 
-<div id="header-container" class="header">
-    <div id="logo" class="logo">
-        <img id="logo-img" src="https://elektra.vtexassets.com/assets/vtex/assets-builder/elektra.store-theme/0.1.282/icn-logo-elektra___be2d09c389ec7e53c29f15cc1c480853.svg" height=40 ">
-    </div>
-    <div id="titulo" class="titulo">
-        Banking app
-    </div>
-
-</div>
-
-<section id="sectionID" class="forms-section">
-
-    <div class="forms">
-        <div class="form-wrapper is-active">
-            <button type="button" class="switcher switcher-login">
-                Login
-                <span class="underline"></span>
-            </button>
-            <form id="login" class="form form-login" action="home_new.html">
-                <fieldset>
-                    <legend>Please, enter your email and password for login.</legend>
-                    <div class="input-block">
-                        <label for="login-email">E-mail</label>
-                        <input id="login-email" type="email" required>
-                    </div>
-                    <div class="input-block">
-                        <label for="login-company">Company</label>
-                        <input id="login-company" type="text" required>
-                    </div>
-                </fieldset>
-                <button type="submit" class="btn-login">Login</button>
-            </form>
+    <div id="header-container" class="header">
+        <div id="logo" class="logo">
+            <img alt="Logo" id="logo-img" src="./images/harness-light.svg" height=30 width="200" style="margin-left:-25px;margin-top:0px;">
         </div>
-        <div class="form-wrapper">
-            <button type="button" class="switcher switcher-signup">
-                Sign Up
-                <span class="underline"></span>
-            </button>
-            <form id="signup" class="form form-signup">
-                <fieldset>
-                    <legend>Please, enter your email, password and password confirmation for sign up.</legend>
-                    <div class="input-block">
-                        <label for="signup-name">Name</label>
-                        <input id="signup-name" type="text" required>
-                    </div>
-                    <div class="input-block">
-                        <label for="signup-company">Company</label>
-                        <input id="signup-company" type="text" required>
-                    </div>
-                    <div class="input-block">
-                        <label for="signup-email">E-mail</label>
-                        <input id="signup-email" type="email" required>
-                    </div>
-                </fieldset>
-                <button type="submit" class="btn-signup">Continue</button>
-            </form>
+        <div id="titulo" class="titulo" >
+            Banking App
+        </div>
+    </div>
+
+
+    <section id="sectionID" class="forms-section">
+
+        <div class="forms">
+            <div class="form-wrapper is-active">
+                <button type="button" class="switcher switcher-login">
+                    <strong>Login</strong>
+                    <span class="underline"></span>
+                </button>
+                <form id="login" class="form form-login" action="home_new.html" >
+                    <fieldset>
+                        <legend>Please, enter your email and password for login.</legend>
+                        <div class="input-block">
+                            <label for="login-email">E-mail</label>
+                            <input id="login-email" type="email" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="login-company">Company</label>
+                            <input id="login-company" type="text" required>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn-login">Login</button>
+                </form>
+            </div>
+            <div class="form-wrapper" id="signupForm"  style="display:none;">
+                <button type="button" class="switcher switcher-signup">
+                    <strong>Sign Up</strong>
+                    <span class="underline"></span>
+                </button>
+                <form id="signup" class="form form-signup">
+                    <fieldset>
+                        <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                        <div class="input-block">
+                            <label for="signup-name">Name</label>
+                            <input id="signup-name" type="text" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="signup-company">Company</label>
+                            <input id="signup-company" type="text" required>
+                        </div>
+                        <div class="input-block">
+                            <label for="signup-email">E-mail</label>
+                            <input id="signup-email" type="email" required>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn-signup">Continue</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- Banner ---->
+<section id="scrolling-partners-section" style="display: none;" >
+    <div class="CustomerLogos_customers__1ED6S CustomerLogos_bgDot__3gR5l">
+        <div class="CustomerLogos_consumerList__3Zo7d">
+            <div class=" marquee-container" style="--pause-on-hover:running; --pause-on-click:running;">
+                <div class="marquee" style="--play:running; --direction:normal; --duration:196s; --delay:0s; --iteration-count:infinite;">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+                </div>
+                <div class="marquee" style="--play:running; --direction:normal; --duration:196s; --delay:0s; --iteration-count:infinite;">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
+                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+                </div>
+            </div>
+        </div>
+        <div class="CustomerLogos_btnContainer__1iJAz">
+            <a href="/customers/">
+                <button type="button" class="ant-btn CustomerLogos_btnLight__tvE6y">
+                    <span>Meet Our Customers</span>
+                </button>
+            </a>
         </div>
     </div>
 </section>
-</div>
-<section id="scrolling-partners-section" style="display: none;">
-    <div id="scrolling-partners-wrapper">
-        <div id="scrolling-marquee" style="background: url(https://harness.io/wp-content/themes/harnessio/assets/images/homepage_logos.png) repeat-x;">
-        </div>
-        <div id="scrolling-partners__link-wrap">
-            <a id="scrolling-partners__link" href="http://harness.io/customers"><span>Meet Our Customers</span></a>
-        </div>
-    </div>
-</section>
+<!-- Banner ---->
 
 <!-- Modal ---->
 
@@ -143,11 +213,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div class="icon-box">
-                    <i id="iconModal" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
+                    <em id="iconModal" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
                 </div>
                 <h4 id="modalTitle" class="modal-title w-100">Awesome!</h4>
             </div>
-            <div class="modal-body">
+            <div id="ModalMessageBody" class="modal-body">
                 <p id="ModalMessage" class="text-center">Your Premium Trial will expire soon, click here to choose a package plan.</p>
             </div>
             <div class="modal-footer">
@@ -158,23 +228,26 @@
 </div>
 
 <!-- SUCCESS Modal HTML -->
+
+
+
 <!--div id="successModal" class="modal fade">
     <div class="modal-dialog modal-confirm">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="icon-box">
                     <i id="iconModalSucesss" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
-                <!--/div>
-                <h4 id="modalTitleSucesss" class="modal-title w-100">Awesome!</h4>
-            </div>
-            <div class="modal-body">
-                <p id="ModalMessageSucesss" class="text-center">Registered</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
-            </div>
-        </div>
-    </div>
+<!--/div>
+<h4 id="modalTitleSucesss" class="modal-title w-100">Awesome!</h4>
+</div>
+<div class="modal-body">
+<p id="ModalMessageSucesss" class="text-center">Registered</p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+</div>
+</div>
+</div>
 </div-->
 
 <!-- Youtube Modal -->
