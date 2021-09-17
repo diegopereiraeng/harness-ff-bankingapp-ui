@@ -77,7 +77,7 @@ function calculateFaceMove(e) {
 	TweenMax.to(earHairR, 1, {x: -outerEarX, y: outerEarY, ease: Expo.easeOut});
 	TweenMax.to(hair, 1, {x: hairX, scaleY: hairS, transformOrigin: "center bottom", ease: Expo.easeOut});	
 		
-	document.body.removeChild(div);
+	document.body.removeChild(div)
 }
 
 function onEmailInput(e) {
