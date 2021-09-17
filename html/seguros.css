@@ -332,10 +332,11 @@ body {
 div.logo {
   width: 200px;
   margin: margin-right;
-  margin-top: 10px;
+  margin-top: 5px;
 
 }
 div.titulo {
+  float: left;
   width: 500px;
   margin: auto;
   font-size: 30px;
