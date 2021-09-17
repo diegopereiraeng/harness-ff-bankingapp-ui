@@ -1,7 +1,5 @@
 # FF Banking App UI
 
-Please, before doing any of the Demos
-
 
 ## BRANCH FEATURES Demo/LAB
 
