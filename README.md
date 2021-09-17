@@ -7,15 +7,6 @@ Please, before doing any of the Demos
 
 1 - edit the [index.hml](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/index.html) file and search for:
 ex:
-<<<<<<< HEAD
-	a - <title>Harness FF Demo</title>
-	b - <div id="titulo" class="titulo">
-        	Banking app
-    	</div>
-	c - <div id="logo" class="logo">
-        	<img id="logo-img" src="https://elektra.vtexassets.com/assets/vtex/assets-builder/elektra.store-theme/0.1.282/icn-logo-elektra___be2d09c389ec7e53c29f15cc1c480853.svg" height=40 ">
-    	</div>
-=======
 
 	a - <title>Harness Demo</title>
 
@@ -27,17 +18,12 @@ ex:
 	        <img id="logo-img" src="https://harness.io/wp-content/themes/harnessio/assets/images/harness-logo.svg" height=40 ">
 	    </div>
 
->>>>>>> c5b2d43824f7f6256468b25aaf568e873d0bcf28
 2 - Save as new Branch
 3 - Create a Pull Request to Dev
 4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
 ex: http://34.121.70.58/Your-Github-User/index.html
 
-<<<<<<< HEAD
-
-=======
 Thanks!
->>>>>>> c5b2d43824f7f6256468b25aaf568e873d0bcf28
 
 
 ## FF DEMO/LAB
@@ -46,13 +32,13 @@ Thanks!
 
 1 - edit the [ff.js](https://github.com/diegopereiraeng/harness-ff-bankingapp-ui/blob/main/html/js/ff.js) file and search for:
 
-  a(FF Key):
-  
-  "UPDATE THE FF SDK KEY HERE" 
+a(FF Key):
 
-  b(Features):
-  
-  ----> ADD Your FEATURES HERE <--------
+"UPDATE THE FF SDK KEY HERE"
+
+b(Features):
+
+----> ADD Your FEATURES HERE <--------
 
 2 - Change the FF key using your own FF key and Add one or more feature below to this part of the code
 
@@ -108,7 +94,7 @@ Value: logo url - ex: http://site.com/image.png
 		imgElement.attr("height","70");
 		imgElement.attr("src",logo);
 	}
-  
+
 ### SEND MESSAGE TO CUSTOMER
 Use Harness String Variant FF to send different messages for your customer.
 
@@ -259,7 +245,7 @@ FUNCTIO:
 	}
 
 ## Colors Features
-	
+
 ### CHANGE HOME BODY COLOR
 Use Harness String Variant  FF to change body color.
 
@@ -272,7 +258,7 @@ Value: html color code or main color names
 	function Home_Body_Color(flag) {
 		checkSiteColor();
 	}
-	
+
 ### CHANGE HOME BODY TEXT COLOR
 Use Harness String Variant  FF to change all text color.
 
