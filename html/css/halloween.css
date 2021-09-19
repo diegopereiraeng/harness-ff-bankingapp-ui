@@ -1,0 +1,394 @@
+.halloweenWitch {
+    /*animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 130px;
+    margin-top: 5px;
+    */
+}
+
+@keyframes halloweenWitch {
+	0% {
+	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+          filter: drop-shadow(0px 0px 0px 0.6);
+		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+		transform: translate(1000% , -1000%) rotate(-100deg);;
+	}
+	30% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+            /*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+            transform: translate(700px, 150px) rotate(-50deg);
+
+    }
+    32% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+            transform: translate(600px, 250px) rotate(10deg);
+
+    }
+	35% {
+    		-webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+    		/*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+    		transform: translate(500px, 350px) rotate(40deg);
+
+    }
+    38% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+            /*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+            transform: translate(350px, 340px) rotate(30deg);;
+        }
+    44% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+            /*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+            transform: translate(150px, 300px) rotate(20deg);;
+        }
+	47% {
+
+		-webkit-filter: drop-shadow(0px 0px 0px 0.2);
+              filter: drop-shadow(0px 0px 0px 0.2);
+		/*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+		transform: translate(0px, 200px) rotate(20deg);
+	}
+
+	50% {
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    		transform: translate(-100%, 0px) rotate(50deg);
+    	}
+    61% {
+            transform: translate(-100%, 120px) scaleX(-1);
+        }
+    70% {
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    		transform: translate(0px, 120px) rotate(3deg) scaleX(-1);
+    	}
+    90% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+            /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+            transform: translate(200px, 120px) rotate(3deg) scaleX(-1);
+        }
+	100% {
+	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+          filter: drop-shadow(0px 0px 0px 0.6);
+		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+		transform: translate(1000%, 10px) rotate(3deg) scaleX(-1);
+	}
+}
+
+.halloweenWitch {
+    position:fixed;
+    z-index: 10;
+    float: left;
+	width: 180px;
+	height: 180px;/*
+	box-sizing: border-box;
+	border: 3px white solid;
+	border-radius: 100%;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: halloweenWitch 15s infinite linear;
+	img { width: 100%; height: auto; }
+	margin-right: 130px;
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(5px 5px 5px #222);
+}
+
+.halloweenVampire {
+    position:fixed;
+    left: 0;
+    right: 0;
+    bottom: 180px;
+    z-index: 20;
+    float: left;
+	width: 180px;
+	height: 180px;/*
+	box-sizing: border-box;
+	border: 3px white solid;
+	border-radius: 100%;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: halloweenVampire 30s infinite linear;
+	img { width: 100%; height: auto; }
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(5px 5px 5px #222);
+}
+
+@keyframes halloweenVampire {
+	0% {
+	    opacity: 1;
+	    transform: translate(0%, 0%)
+	}
+	5% {
+        opacity: 0;
+        transform: translate(0%, 0%)
+    }
+    10% {
+        opacity: 0;
+        transform: translate(100%, -200%)
+        }
+    15% {
+        opacity: 1;
+        transform: translate(100%, -200%)
+        }
+    20% {
+        opacity: 0;
+        transform: translate(100%, -200%)
+        }
+    30% {
+        opacity: 0;
+        transform: translate(300%, -50%)
+        }
+    35% {
+        opacity: 1;
+        transform: translate(300%, -50%)
+        }
+    40% {
+        opacity: 0;
+        transform: translate(300%, -50%)
+        }
+    45% {
+        opacity: 0;
+        transform: translate(100%, 0%)
+        }
+    50% {
+        opacity: 0;
+        transform: translate(100%, 0%)
+        }
+    55% {
+            opacity: 0;
+            transform: translate(100%, 0%) scale(2.0)
+            }
+    57% {
+            opacity: 1;
+            transform: translate(100%, 0%) scale(2.0)
+            }
+    59% {
+            opacity: 0;
+            transform: translate(100%, 0%) scale(2.0)
+            }
+    62% {
+            opacity: 0;
+            transform: translate(200%, 0%) scale(4.0)
+            }
+    70% {
+            opacity: 1;
+            transform: translate(200%, 0%) scale(4.0)
+            }
+    71% {
+            opacity: 0;
+            transform: translate(200%, 0%) scale(4.0)
+            }
+    75% {
+            opacity: 0;
+            transform: translate(300%, 0%) scale(2.0)
+            }
+    80% {
+        opacity: 1;
+        transform: translate(300%, 0%) scale(2.0)
+        }
+    81% {
+        opacity: 0;
+        transform: translate(300%, 0%) scale(2.0)
+        }
+    100% {
+        opacity: 0;
+        transform: translate(300%, 0%) scale(2.0)
+        }
+}
+
+.halloweenFrank {
+    position:fixed;
+    right: -40px;
+    bottom: 180px;
+    z-index: 10;
+    float: left;
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: halloweenFrank 30s infinite linear;
+	img { width: 100%; height: auto; }
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(5px 5px 5px #222);
+}
+
+@keyframes halloweenFrank {
+	0% {
+	    opacity: 0;
+	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+          filter: drop-shadow(0px 0px 0px 0.6);
+		transform: translate(20% , 0%) rotate(0deg);
+	}
+	5% {
+    	    opacity: 0;
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		transform: translate(20% , 0%) rotate(0deg);
+    	}
+    7% {
+        	    opacity: 1;
+        	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+                  filter: drop-shadow(0px 0px 0px 0.6);
+        		transform: translate(20% , 0%) rotate(0deg);
+        	}
+	10% {
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		transform: translate(20% , 00%) rotate(0deg);
+    	}
+	15% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+            transform: translate(-20% , 0%) rotate(-30deg);
+    }
+    22% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+            transform: translate(-60%, 0%) rotate(0deg);
+    }
+	29% {
+    		-webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+    		transform: translate(-100%, 0%) rotate(-30deg);
+
+    }
+    37% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+            transform: translate(-140%, 0%) rotate(0deg);
+        }
+
+    45% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.2);
+                  filter: drop-shadow(0px 0px 0px 0.2);
+            transform: translate(-180%, 0%) rotate(-30deg);;
+        }
+
+	53% {
+
+		-webkit-filter: drop-shadow(0px 0px 0px 0.2);
+              filter: drop-shadow(0px 0px 0px 0.2);
+		/*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+		transform: translate(-220%, 0%) rotate(0deg);
+	}
+	60% {
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		transform: translate(-260%, 0%) rotate(-30deg);
+    	}
+    70% {
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    		transform: translate(-300%, 0%) rotate(0deg);
+    	}
+    80% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+            /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+            transform: translate(-340%, 0%) rotate(-30deg);
+        }
+	85% {
+	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+          filter: drop-shadow(0px 0px 0px 0.6);
+		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+		transform: translate(-380%, 0%) rotate(0deg) ;
+		opacity: 1;
+	}
+	95% {
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    		transform: translate(-380%, 0%) rotate(0deg) ;
+    		opacity: 1;
+    	}
+	97% {
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    		transform: translate(-380%, 0%) rotate(0deg) ;
+    		opacity: 0;
+    	}
+
+	100% {
+	        opacity: 0;
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0px 0px 0px 0.6);
+    		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    		transform: translate(-380%, 0%) rotate(0deg) ;
+    	}
+}
+
+.halloweenDoor {
+    position:fixed;
+    right: -62px;
+    bottom: 203px;
+    z-index: 15;
+    float: left;
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: halloweenDoor 30s infinite linear;
+	img { width: 100%; height: auto; }
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(5px 5px 5px #222);
+}
+
+@keyframes halloweenDoor {
+	0% {
+	    opacity: 0;
+	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+          filter: drop-shadow(0% 0px 0px 0.6);
+	}
+	5% {
+        	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+                  filter: drop-shadow(0% 0px 0px 0.6);
+        		opacity: 1;
+        	}
+	10% {
+    	    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+              filter: drop-shadow(0% 0px 0px 0.6);
+            opacity: 0;
+            transform: translate(0%, 0%) rotate(0deg) ;
+    	}
+    	70% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+               filter: drop-shadow(0px 0px 0px 0.6);
+            /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+            transform: translate(-400%, 0%) rotate(0deg) ;
+            opacity: 0;
+        }
+        75% {
+                    -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+                       filter: drop-shadow(0px 0px 0px 0.6);
+                    /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+                    transform: translate(-400%, 0%) rotate(0deg) ;
+                    opacity: 1;
+                    }
+        98% {
+            -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+               filter: drop-shadow(0px 0px 0px 0.6);
+            /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+            transform: translate(-400%, 0%) rotate(0deg) ;
+            opacity: 1;
+            }
+        100% {
+                opacity: 0;
+                -webkit-filter: drop-shadow(0px 0px 0px 0.6);
+                   filter: drop-shadow(0px 0px 0px 0.6);
+                /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+                transform: translate(-400%, 0%) rotate(0deg) ;
+            }
+}
