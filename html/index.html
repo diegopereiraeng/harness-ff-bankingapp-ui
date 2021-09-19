@@ -21,6 +21,9 @@
     <script type="module" src="./js/ff.js"></script>
     <link href="./seguros.css" type="text/css" rel="stylesheet"/>
     <link href="./maintenance.css" type="text/css" rel="stylesheet"/>
+    <!--Halloween-->
+    <link href="./css/halloween.css" type="text/css" rel="stylesheet"/>
+    <!--Halloween-->
     <!-- Banner Harness Customers -->
     <link rel="icon" href="http://harness.io/favicon.ico">
     <link rel="preload" href="http://harness.io/_next/static/css/188939d7872d14a389aa.css" as="style">
@@ -46,234 +49,257 @@
 </head>
 
 <body>
-
-<!-- Button trigger Youtube modal -->
-<div style="display:none;">
+<div id="master">
+    <div id="Harness" style="display: none;">
+        <iframe id="HarnessIO" type="text/html" width="100%" height="5000px" class="embed-responsive-item" src="http://34.94.96.94:3000/"  allowscriptaccess="always" title="Harness - Halloween" allow="autoplay" allowfullscreen></iframe>
+    </div>
+    <div id="Halloween" style="display: none;">
+        <div class="halloweenVampire">
+            <img alt="Logo" id="halloween-canary1" class="imgHalloween" src="./images/Canaries/Canary-Halloween-Vampire.png" height=150 width="120">
+        </div>
+        <div class="halloweenWitch">
+            <img alt="Logo" id="halloween-canary2" class="imgHalloween" src="./images/Canaries/Canary-Halloween-Witch.png" height=150 width="120">
+        </div>
+        <div class="halloweenFrank">
+            <img alt="Logo" id="halloween-canary3" class="imgHalloween" src="./images/Canaries/Canary-Halloween-Frank.png" height=150 width="120">
+        </div>
+        <div class="halloweenDoor">
+            <img alt="Logo" id="halloween-door" class="imgHalloween" src="./images/mario-door.png" height=200 width="150">
+        </div>
+    </div>
     <!-- Button trigger Youtube modal -->
-    <button id="youtubebtn" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/VSHVo9jHMAk" data-target="#youtubeModal" style="display:none;">
-    </button>
-</div>
-<!-- Button HTML (to Trigger Modal) -->
-<a id="modalButton" href="#myModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
-<a id="successButton" href="#sucessModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
-
-<!-- Harness CKO Mode -->
-<div id="cko2021" style="display: none;">
-    <iframe id="ckoContent" type="text/html" width="100%" height="1000px" class="embed-responsive-item" src="http://34.94.96.94:3000/" id="cko"  allowscriptaccess="always" title="Harness - CKO 2021" allow="autoplay" allowfullscreen></iframe>
-    <!--iframe id="ckoContent" src="http://34.94.96.94:3000/" style="z-index: 2;border: none;display: none;" width="auto" height="auto"></iframe-->
-</div>
-
-<!-- Maitenance Mode -->
-<div id="maintenance" style="display: none;">
-    <div id="error">
-        <div id="box"></div>
-        <h3>Site under Maintenance</h3>
-        <p>Things are a little <span>unstable</span> here</p>
-        <p>I suggest come back later</p>
+    <div style="display:none;">
+        <!-- Button trigger Youtube modal -->
+        <button id="youtubebtn" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/VSHVo9jHMAk" data-target="#youtubeModal" style="display:none;">
+        </button>
     </div>
-    <p></p>
-</div>
-<div id="qrcode-menu">
-    <nav class="w3-sidebar w3-collapse harness-wildcard" style="z-index:3;width:100%;display: none;" id="Sidebar"><br>
-        <div id="qrcode" class="logo">
-            <img alt="QR Code" id="qrcode-img" src="./images/qr-code2.svg" height="600" > <!--width="114"-->
-        </div>
-    </nav>
-</div>
-<!-- Top container -->
-<div id="site"  class="site" style="display: none;">
+    <!-- Button HTML (to Trigger Modal) -->
+    <a id="modalButton" href="#myModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
+    <a id="successButton" href="#sucessModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
 
-    <div id="header-container" class="header">
-        <div id="logo" class="logo">
-            <img alt="Logo" id="logo-img" src="./images/harness-light.svg" height=30 width="200" style="margin-left:-25px;margin-top:0px;">
-        </div>
-        <div id="titulo" class="titulo" >
-            Banking App
-        </div>
+    <!-- Harness CKO Mode -->
+    <div id="cko2021" style="display: none;">
+        <iframe id="ckoContent" type="text/html" width="100%" height="1000px" class="embed-responsive-item" src="http://34.94.96.94:3000/" id="cko"  allowscriptaccess="always" title="Harness - CKO 2021" allow="autoplay" allowfullscreen></iframe>
+        <!--iframe id="ckoContent" src="http://34.94.96.94:3000/" style="z-index: 2;border: none;display: none;" width="auto" height="auto"></iframe-->
     </div>
 
-
-    <section id="sectionID" class="forms-section">
-
-        <div class="forms">
-            <div class="form-wrapper is-active">
-                <button type="button" class="switcher switcher-login">
-                    <strong>Login</strong>
-                    <span class="underline"></span>
-                </button>
-                <form id="login" class="form form-login" action="home_new.html" >
-                    <fieldset>
-                        <legend>Please, enter your email and password for login.</legend>
-                        <div class="input-block">
-                            <label for="login-email">E-mail</label>
-                            <input id="login-email" type="email" required>
-                        </div>
-                        <div class="input-block">
-                            <label for="login-company">Company</label>
-                            <input id="login-company" type="text" required>
-                        </div>
-                    </fieldset>
-                    <button type="submit" class="btn-login">Login</button>
-                </form>
-            </div>
-            <div class="form-wrapper" id="signupForm"  style="display:none;">
-                <button type="button" class="switcher switcher-signup">
-                    <strong>Sign Up</strong>
-                    <span class="underline"></span>
-                </button>
-                <form id="signup" class="form form-signup">
-                    <fieldset>
-                        <legend>Please, enter your email, password and password confirmation for sign up.</legend>
-                        <div class="input-block">
-                            <label for="signup-name">Name</label>
-                            <input id="signup-name" type="text" required>
-                        </div>
-                        <div class="input-block">
-                            <label for="signup-company">Company</label>
-                            <input id="signup-company" type="text" required>
-                        </div>
-                        <div class="input-block">
-                            <label for="signup-email">E-mail</label>
-                            <input id="signup-email" type="email" required>
-                        </div>
-                    </fieldset>
-                    <button type="submit" class="btn-signup">Continue</button>
-                </form>
-            </div>
+    <!-- Maitenance Mode -->
+    <div id="maintenance" style="display: none;">
+        <div id="error">
+            <div id="box"></div>
+            <h3>Site under Maintenance</h3>
+            <p>Things are a little <span>unstable</span> here</p>
+            <p>I suggest come back later</p>
         </div>
-    </section>
-</div>
-<!-- Banner ---->
-<section id="scrolling-partners-section" style="display: none;" >
-    <div class="CustomerLogos_customers__1ED6S CustomerLogos_bgDot__3gR5l">
-        <div class="CustomerLogos_consumerList__3Zo7d">
-            <div class=" marquee-container" style="--pause-on-hover:running; --pause-on-click:running;">
-                <div class="marquee" style="--play:running; --direction:normal; --duration:196s; --delay:0s; --iteration-count:infinite;">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+        <p></p>
+    </div>
+    <div id="Page" style="display: visibility;">
+        <div id="qrcode-menu">
+            <nav class="w3-sidebar w3-collapse harness-wildcard" style="z-index:3;width:100%;display: none;" id="Sidebar"><br>
+                <div id="qrcode" class="logo">
+                    <img alt="QR Code" id="qrcode-img" src="./images/qr-code2.svg" height="600" > <!--width="114"-->
                 </div>
-                <div class="marquee" style="--play:running; --direction:normal; --duration:196s; --delay:0s; --iteration-count:infinite;">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
-                    <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+            </nav>
+        </div>
+        <!-- Top container -->
+        <div id="site"  class="site" style="display: none;">
+
+            <div id="header-container" class="header">
+                <div id="logo" class="logo">
+                    <img alt="Logo" id="logo-img" src="./images/harness-light.svg" height=30 width="200" style="margin-left:-25px;margin-top:0px;">
+                </div>
+                <div id="titulo" class="titulo" >
+                    Banking App
                 </div>
             </div>
-        </div>
-        <div class="CustomerLogos_btnContainer__1iJAz">
-            <a href="/customers/">
-                <button type="button" class="ant-btn CustomerLogos_btnLight__tvE6y">
-                    <span>Meet Our Customers</span>
-                </button>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Banner ---->
-
-<!-- Modal ---->
-
-<!-- Modal HTML -->
-<div id="myModal" class="modal fade">
-    <div class="modal-dialog modal-confirm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="icon-box">
-                    <em id="iconModal" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
-                </div>
-                <h4 id="modalTitle" class="modal-title w-100">Awesome!</h4>
-            </div>
-            <div id="ModalMessageBody" class="modal-body">
-                <p id="ModalMessage" class="text-center">Your Premium Trial will expire soon, click here to choose a package plan.</p>
-            </div>
-            <div class="modal-footer">
-                <button id="btnModalOk" class="btn btn-success btn-block" data-dismiss="modal">OK</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- SUCCESS Modal HTML -->
 
 
 
-<!--div id="successModal" class="modal fade">
-    <div class="modal-dialog modal-confirm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="icon-box">
-                    <i id="iconModalSucesss" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
-<!--/div>
-<h4 id="modalTitleSucesss" class="modal-title w-100">Awesome!</h4>
-</div>
-<div class="modal-body">
-<p id="ModalMessageSucesss" class="text-center">Registered</p>
-</div>
-<div class="modal-footer">
-<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
-</div>
-</div>
-</div>
-</div-->
+            <section id="sectionID" class="forms-section">
 
-<!-- Youtube Modal -->
-<div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="Harness on Youtube" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+                <div class="forms">
+                    <div class="form-wrapper is-active">
 
-
-            <div class="modal-body" >
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <!-- 16:9 aspect ratio -->
-                <div class="embed-responsive embed-responsive-16by9" width="720" height="405" >
-                    <!--iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/VSHVo9jHMAk" title="Captain Canary" allowscriptaccess="always" allow="autoplay" allowfullscreen></iframe-->
-                    <iframe id="youtubeID" type="text/html" width="720" height="405" class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" title="Captain Canary" allow="autoplay" allowfullscreen></iframe>
+                        <button type="button" class="switcher switcher-login">
+                            <strong>Login</strong>
+                            <span class="underline"></span>
+                        </button>
+                        <form id="login" class="form form-login" action="home_new.html" >
+                            <fieldset>
+                                <legend>Please, enter your email and password for login.</legend>
+                                <div class="input-block">
+                                    <label for="login-email">E-mail</label>
+                                    <input id="login-email" type="email" required>
+                                </div>
+                                <div class="input-block">
+                                    <label for="login-company">Company</label>
+                                    <input id="login-company" type="text" required>
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn-login">Login</button>
+                        </form>
+                    </div>
+                    <div class="form-wrapper" id="signupForm"  style="display:none;">
+                        <button type="button" class="switcher switcher-signup">
+                            <strong>Sign Up</strong>
+                            <span class="underline"></span>
+                        </button>
+                        <form id="signup" class="form form-signup">
+                            <fieldset>
+                                <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                                <div class="input-block">
+                                    <label for="signup-name">Name</label>
+                                    <input id="signup-name" type="text" required>
+                                </div>
+                                <div class="input-block">
+                                    <label for="signup-company">Company</label>
+                                    <input id="signup-company" type="text" required>
+                                </div>
+                                <div class="input-block">
+                                    <label for="signup-email">E-mail</label>
+                                    <input id="signup-email" type="email" required>
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn-signup">Continue</button>
+                        </form>
+                    </div>
                 </div>
 
+            </section>
+        </div>
 
+        <!-- Banner ---->
+        <section id="scrolling-partners-section" style="display: none;" >
+            <div class="CustomerLogos_customers__1ED6S CustomerLogos_bgDot__3gR5l">
+                <div class="CustomerLogos_consumerList__3Zo7d">
+                    <div class=" marquee-container" style="--pause-on-hover:running; --pause-on-click:running;">
+                        <div class="marquee" style="--play:running; --direction:normal; --duration:196s; --delay:0s; --iteration-count:infinite;">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+                        </div>
+                        <div class="marquee" style="--play:running; --direction:normal; --duration:196s; --delay:0s; --iteration-count:infinite;">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ebay_12dd4c3a60.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/capital_one_e2b9c8aae2.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/vmware_772b2447a5.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/openbank_7d81a444a4.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/soulcycle_01c3339e22.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/gannett_a5bcfe3583.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ncr_44ceda7801.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/jobvite_4994adeeef.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/ancestry_25c0a38d8d.svg" width="224" height="64">
+                            <img alt="Customer" class="CustomerLogos_marqueeImg__1yMDW" src="https://cms.harness.io/uploads/beachbody_1fea5176cf.svg" width="224" height="64">
+                        </div>
+                    </div>
+                </div>
+                <div class="CustomerLogos_btnContainer__1iJAz">
+                    <a href="/customers/">
+                        <button type="button" class="ant-btn CustomerLogos_btnLight__tvE6y">
+                            <span>Meet Our Customers</span>
+                        </button>
+                    </a>
+                </div>
             </div>
+        </section>
+        <!-- Banner ---->
 
+        <!-- Modal ---->
+
+        <!-- Modal HTML -->
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="icon-box">
+                            <em id="iconModal" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
+                        </div>
+                        <h4 id="modalTitle" class="modal-title w-100">Awesome!</h4>
+                    </div>
+                    <div id="ModalMessageBody" class="modal-body">
+                        <p id="ModalMessage" class="text-center">Your Premium Trial will expire soon, click here to choose a package plan.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnModalOk" class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUCCESS Modal HTML -->
+
+
+
+        <!--div id="successModal" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="icon-box">
+                            <i id="iconModalSucesss" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
+        <!--/div>
+        <h4 id="modalTitleSucesss" class="modal-title w-100">Awesome!</h4>
+        </div>
+        <div class="modal-body">
+        <p id="ModalMessageSucesss" class="text-center">Registered</p>
+        </div>
+        <div class="modal-footer">
+        <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+        </div>
+        </div>
+        </div>
+        </div-->
+
+        <!-- Youtube Modal -->
+        <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="Harness on Youtube" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+
+                    <div class="modal-body" >
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9" width="720" height="405" >
+                            <!--iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/VSHVo9jHMAk" title="Captain Canary" allowscriptaccess="always" allow="autoplay" allowfullscreen></iframe-->
+                            <iframe id="youtubeID" type="text/html" width="720" height="405" class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" title="Captain Canary" allow="autoplay" allowfullscreen></iframe>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 
 </body>
 </html>

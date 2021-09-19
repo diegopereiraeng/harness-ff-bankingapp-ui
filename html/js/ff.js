@@ -100,6 +100,7 @@ var ckoStatus = false
 
 /* START FEATURE FLAGS FUNCTIONS */
 
+
 function Home_Maintenance(maintenance) {
 
 	var siteElement = $("body").find(".site");
@@ -311,7 +312,7 @@ function showMenuContent(site,name,id){
     }
     else{
         
-        $("body").find("#iframeContent").attr("style","display: visibility;width:"+($(window).width()) + 'px'+";height:"+$(window).height()+ 'px;');
+        $("body").find("#iframeContent").attr("style","display: visibility;width:"+($(window).width()) + 'px'+";height:"+($(window).height())+ 'px;');
         resizeIframe();
         $("body").find("#iframeContent").attr("src",site);
 
