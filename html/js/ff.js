@@ -135,7 +135,7 @@ function Home_Maintenance(maintenance) {
 	console.log("Maintenance: "+maintenance)
 
 	if ( maintenance == 'true'){
-	    maintenanceMode = true
+		maintenanceMode = true
 		console.log("Setting Maintenance: "+maintenance)
 		siteElement.attr("style","display: none;");
 		halloweenElement.attr("style","display: none;");
@@ -144,21 +144,21 @@ function Home_Maintenance(maintenance) {
 		$("body").find("#scrolling-partners-section").attr("style","display: none;");
 	}
 	else{
-	    maintenanceMode = false
-	    switch(siteMode){
-            case "Site":
-                siteElement.attr("style","display: visibility;");
-                break;
-            case "Harness":
-                harnessElement.attr("style","display: visibility;");
-                break;
-        }
+		maintenanceMode = false
+		switch(siteMode){
+			case "Site":
+				siteElement.attr("style","display: visibility;");
+				break;
+			case "Harness":
+				harnessElement.attr("style","display: visibility;");
+				break;
+			}
 
 		if (Halloween == true ){
-		    halloweenElement.attr("style","display: visibility;");
+			halloweenElement.attr("style","display: visibility;");
 		}
 		if (Banner == true ){
-            $("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+			$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
         }
 		maintenanceElement.attr("style","display: none;");
 	}
