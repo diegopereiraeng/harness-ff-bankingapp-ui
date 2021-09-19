@@ -5,8 +5,6 @@ var menuStyle = ''
 var menuSelectedStyle= 'w3-blue'
 var firstStart = true
 var currentContent
-var maintenanceMode = false
-var siteMode = "Site"
 
 const cf = initialize(
     'eae200d6-fec2-4352-9227-927a67df73ea',
@@ -96,6 +94,8 @@ var modalStatus = ''
 var modalStatusMessage = ""
 var youtubeStatus = 'off'
 var ckoStatus = false
+var maintenanceMode = false
+var siteMode = "Site"
 
 /* End FF Control */
 
@@ -105,7 +105,7 @@ function Halloween(flag) {
 	var siteElement = $("body").find(".site");
 	var harnessElement = $("body").find("#Harness");
 	var halloweenElement = $("body").find("#Halloween");
-	Halloween = flag
+	HalloweenMode = flag
 	console.log("Halloween: "+flag)
     if (maintenanceMode == false){
         if ( flag == 'true'){
