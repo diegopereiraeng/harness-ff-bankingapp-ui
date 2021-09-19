@@ -96,6 +96,7 @@ var youtubeStatus = 'off'
 var ckoStatus = false
 var maintenanceMode = false
 var siteMode = "Site"
+var HalloweenMode = true
 
 /* End FF Control */
 
@@ -105,22 +106,16 @@ function Halloween(flag) {
 	var siteElement = $("body").find(".site");
 	var harnessElement = $("body").find("#Harness");
 	var halloweenElement = $("body").find("#Halloween");
+	var body = $("body").css("background-color", "purple");
 	HalloweenMode = flag
 	console.log("Halloween: "+flag)
 	if (maintenanceMode == false){
 		if ( flag == 'true'){
 			console.log("Setting Halloween: "+flag)
-			siteElement.attr("style","display: none;");
-			harnessElement.attr("style","display: none;");
-			halloweenElement.attr("style","display: visibility;");
-			$("body").find("#scrolling-partners-section").attr("style","display: none;");
+			halloweenElement.attr("background-color","purple");
 		}
 		else{
-			siteElement.attr("style","display: visibility;");
-			harnessElement.attr("style","display: visibility;");
-			$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
 			halloweenElement.attr("style","display: none;");
-			$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
 		}
 	}
 
