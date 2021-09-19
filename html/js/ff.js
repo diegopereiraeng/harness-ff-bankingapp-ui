@@ -5,6 +5,8 @@ var menuStyle = ''
 var menuSelectedStyle= 'w3-blue'
 var firstStart = true
 var currentContent
+var maintenanceMode = false
+var siteMode = "Site"
 
 const cf = initialize(
     'eae200d6-fec2-4352-9227-927a67df73ea',
@@ -99,25 +101,66 @@ var ckoStatus = false
 
 
 /* START FEATURE FLAGS FUNCTIONS */
+function Halloween(flag) {
+	var siteElement = $("body").find(".site");
+	var harnessElement = $("body").find("#Harness");
+	var halloweenElement = $("body").find("#Halloween");
+	Halloween = flag
+	console.log("Halloween: "+flag)
+    if (maintenanceMode == false){
+        if ( flag == 'true'){
+            console.log("Setting Halloween: "+flag)
+            siteElement.attr("style","display: none;");
+            harnessElement.attr("style","display: none;");
+            halloweenElement.attr("style","display: visibility;");
+            $("body").find("#scrolling-partners-section").attr("style","display: none;");
+        }
+        else{
+            siteElement.attr("style","display: visibility;");
+            harnessElement.attr("style","display: visibility;");
+            $("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+            halloweenElement.attr("style","display: none;");
+            $("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+        }
+	}
 
+}
 
 function Home_Maintenance(maintenance) {
 
 	var siteElement = $("body").find(".site");
+	var halloweenElement = $("body").find("#Halloween");
+	var harnessElement = $("body").find("#Harness");
 	var maintenanceElement = $("body").find("#maintenance");
 	console.log("Maintenance: "+maintenance)
 
 	if ( maintenance == 'true'){
+	    maintenanceMode = true
 		console.log("Setting Maintenance: "+maintenance)
 		siteElement.attr("style","display: none;");
+		halloweenElement.attr("style","display: none;");
+		harnessElement.attr("style","display: none;");
 		maintenanceElement.attr("style","display: visibility;");
 		$("body").find("#scrolling-partners-section").attr("style","display: none;");
 	}
 	else{
-		siteElement.attr("style","display: visibility;");
-		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+	    maintenanceMode = false
+	    switch(siteMode){
+            case "Site":
+                siteElement.attr("style","display: visibility;");
+                break;
+            case "Harness":
+                harnessElement.attr("style","display: visibility;");
+                break;
+        }
+
+		if (Halloween == true ){
+		    halloweenElement.attr("style","display: visibility;");
+		}
+		if (Banner == true ){
+            $("body").find("#scrolling-partners-section").attr("style","display: visibility;");
+        }
 		maintenanceElement.attr("style","display: none;");
-		$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
 	}
 
 }
@@ -559,9 +602,11 @@ function checkBanner(){
     var dashboardElement = $("body").find("#scrolling-partners-section");
 
     if (banner == "Harness"){
+        Banner = true
         dashboardElement.attr("style","display: visibility;");
     }
     else{
+        Banner = false
         dashboardElement.attr("style","display: none;");
     }
 }
