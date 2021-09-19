@@ -107,11 +107,12 @@ function Halloween(flag) {
 	var harnessElement = $("body").find("#Harness");
 	var halloweenElement = $("body").find("#Halloween");
 	var body = $("body").css("background-color", "purple");
-	HalloweenMode = flag
+	HalloweenMode = flag;
 	console.log("Halloween: "+flag)
 	if (maintenanceMode == false){
-		if ( flag == 'true'){
+		if ( HalloweenMode == 'true'){
 			console.log("Setting Halloween: "+flag)
+			halloweenElement.attr("style","display: visibility;");
 			halloweenElement.attr("background-color","purple");
 		}
 		else{
