@@ -102,6 +102,26 @@ var HalloweenMode = true
 
 
 /* START FEATURE FLAGS FUNCTIONS */
+function HalloweenSongEnabled(flag) {
+	if (ready) {
+		var halloweenSongElement = document.getElementById('HalloweenTheme');
+		if(flag == 'true'){
+			console.log("Halloween Theme")
+			halloweenSongElement.play();
+		}else{
+			halloweenSongElement.pause();
+		}
+	}
+}
+function HalloweenJack(flag) {
+		var jack = $("body").find(".halloween");
+		if(flag == 'true'){
+			console.log("JAck In dA HouSe")
+			jack.attr("style","display: visibility;");
+		}else{
+			jack.attr("style","display: none;");
+		}
+}
 function Halloween(flag) {
 	var siteElement = $("body").find(".site");
 	var harnessElement = $("body").find("#Harness");
@@ -113,7 +133,12 @@ function Halloween(flag) {
 		if ( HalloweenMode == 'true'){
 			console.log("Setting Halloween: "+flag)
 			halloweenElement.attr("style","display: visibility;");
-			halloweenElement.attr("background-color","purple");
+			//var audio = new Audio('./songs/HalloweenThemeSong.mp3');
+			//var playPromise = audio.play();
+
+			$( 'body' ).each(function () {
+                    this.style.setProperty( 'background-color', '#512888', 'important' );
+                });
 		}
 		else{
 			halloweenElement.attr("style","display: none;");
