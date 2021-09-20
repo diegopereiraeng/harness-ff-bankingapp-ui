@@ -23,6 +23,45 @@
     <link href="./maintenance.css" type="text/css" rel="stylesheet"/>
     <!--Halloween-->
     <link href="./css/halloween.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Mouse -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    var ready = false
+    document.addEventListener("DOMContentLoaded", function(event) {
+      ready = true
+    });
+    var jackWords = ['Im Jack','Ouch','Halloween','Candy?','Threats =D','Stop it','Booo'];
+    function randomWord(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];}
+    var lock = false
+    var lockSong = false
+    $( function() {
+        $( "#draggable" ).draggable();
+
+        $('#draggable').click(function(){
+        if (lock == false){
+            lock = true
+            $(".speech-bubble").css("visibility", "visible");
+            $(".speech-bubble").text(randomWord(jackWords));
+            setTimeout(() => {  $(".speech-bubble").css("visibility", "hidden");lock = false; }, 2000);
+
+        }else{
+            console.log("Ouch")
+        }
+        if (lockSong == false){
+            lockSong = true
+            var audio = new Audio('./songs/HalloweenThemeSong.mp3');
+            var playPromise = audio.play();
+            setTimeout(() => {  audio.pause();lockSong = false;}, 25000);
+
+        }
+    }
+    )
+    } );
+
+  </script>
     <!--Halloween-->
     <!-- Banner Harness Customers -->
     <link rel="icon" href="http://harness.io/favicon.ico">
@@ -50,7 +89,23 @@
 
 <body>
 <div id="master">
-
+    <div id="draggable" class="halloween">
+        <div class="speech-bubble" >Ouch</div>
+        <div class="head">
+            <div class="skull">
+                <div class="eyes">
+                    <div class="eye eye-left"></div>
+                    <div class="eye eye-right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="body"></div>
+        <div class="legs"></div>
+    </div>
+    <audio id="HalloweenTheme">
+        <source src="./songs/HalloweenThemeSong.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <div id="Halloween" style="display: none;">
         <div class="halloweenVampire">
             <img alt="Logo" id="halloween-canary1" class="imgHalloween" src="./images/Canaries/Canary-Halloween-Vampire.png" height=150 width="120">
@@ -239,7 +294,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="icon-box">
-                        <em id="iconModal" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
+                        <em id="iconModal" class="material-icons">&#xE876;</em> <!-- &#xE5CD;  Error-->
                     </div>
                     <h4 id="modalTitle" class="modal-title w-100">Awesome!</h4>
                 </div>
