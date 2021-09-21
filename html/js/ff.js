@@ -97,6 +97,7 @@ var ckoStatus = false
 var maintenanceMode = false
 var siteMode = "Site"
 var HalloweenMode = true
+var Banner=true
 
 /* End FF Control */
 
