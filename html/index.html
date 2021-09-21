@@ -3,15 +3,6 @@
 <head>
     <title>Harness FF Demo</title>
     <meta charset="UTF-8">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZD3111HXJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-ZZD3111HXJ');
-    </script>
     <script src="./js/appdynamics.js" charset="UTF-8" type="text/javascript"></script>
     <script src="//cdn.appdynamics.com/adrum/adrum-21.4.0.3405.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,6 +12,9 @@
     <script type="module" src="./js/ff.js"></script>
     <link href="./seguros.css" type="text/css" rel="stylesheet"/>
     <link href="./maintenance.css" type="text/css" rel="stylesheet"/>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZD3111HXJ"></script>
+
     <!--Halloween-->
     <link href="./css/halloween.css" type="text/css" rel="stylesheet"/>
 
@@ -89,7 +83,7 @@
 
 <body>
 <div id="master">
-    <div id="draggable" class="halloween">
+    <div id="draggable" class="halloween" style="display: none;">
         <div class="speech-bubble" >Ouch</div>
         <div class="head">
             <div class="skull">
