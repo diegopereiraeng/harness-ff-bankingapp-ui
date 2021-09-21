@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-	'eae200d6-fec2-4352-9227-927a67df73ea',
+	'aac2ac37-245d-4a24-a149-7b83efaaf374',
 	// ^^ UPDATE THE FF SDK KEY HERE ^^ //
 	target
 );
@@ -97,7 +97,7 @@ var ckoStatus = false
 var maintenanceMode = false
 var siteMode = "Site"
 var HalloweenMode = true
-var Banner = true
+var Banner=true
 
 /* End FF Control */
 
@@ -124,7 +124,10 @@ function HalloweenJack(flag) {
 		}
 }
 function Halloween(flag) {
+	var siteElement = $("body").find(".site");
+	var harnessElement = $("body").find("#Harness");
 	var halloweenElement = $("body").find("#Halloween");
+	var body = $("body").css("background-color", "purple");
 	HalloweenMode = flag;
 	console.log("Halloween: "+flag)
 	if (maintenanceMode == false){
@@ -198,6 +201,12 @@ function Index_SignUp_Enable(flag){
 	}
 }
 // ----> ADD Your FEATURES HERE <-------- //
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
+
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
