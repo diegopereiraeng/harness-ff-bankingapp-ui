@@ -9,6 +9,7 @@ var currentContent
 const cf = initialize(
 	'7660587d-3341-4f82-8c91-a01e124094ef',
 	// ^^ UPDATE THE FF SDK KEY HERE ^^ //
+	//Proposal Change//
 	target
 );
 
