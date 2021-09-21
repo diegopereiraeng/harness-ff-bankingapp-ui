@@ -12,77 +12,7 @@ const cf = initialize(
 	target
 );
 
-function getTarget(){
-	var targetObj
-	if(typeof(Storage) !== "undefined"){
-		if((typeof(window.localStorage.harnessDemoSignUpEmail) !== "undefined") && typeof(window.localStorage.harnessDemoCompany) !== "undefined"){
-			if (window.location.href.indexOf("index.html") > -1) {
-				targetObj = {
-							identifier: 'Guest',
-							name: "Guest",
-							attributes: {
-							email: "community@harness.io",
-							Company: "Community",
-							Name: "Visitor"
-						}
-				}
-				var customer = window.localStorage.harnessCustomer
-				if (customer == 'true') {
-					var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
-					targetObj = {
-						identifier: ffID,
-						name: window.localStorage.harnessDemoSignUpName,
-						attributes: {
-							email: window.localStorage.harnessDemoSignUpEmail,
-							Company: window.localStorage.harnessDemoSignUpCompany,
-							Name: window.localStorage.harnessDemoSignUpName
-						}
-					}
-					menuStyle = 'new_menu'
-				}
-			}
-			else{
-				var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
-				targetObj = {
-						identifier: ffID,
-						name: window.localStorage.harnessDemoSignUpName,
-						attributes: {
-						email: window.localStorage.harnessDemoSignUpEmail,
-						Company: window.localStorage.harnessDemoSignUpCompany,
-						Name: window.localStorage.harnessDemoSignUpName
-					}
-				}
-			}
-			var welcome = $("body").find("#Welcome")
-			welcome.text("");
-			welcome.append("Welcome, <br><strong>"+window.localStorage.harnessDemoSignUpName+"</strong>")
-		}
-		else{
-			targetObj = {
-				identifier: 'Guest',
-				name: "Guest",
-				attributes: {
-				email: "community@harness.io",
-				Company: "Community",
-				Name: "Visitor"
-				}
-				}
-		}
-	}
-	else
-	{
-		targetObj = {
-			identifier: 'Guest',
-			name: "Guest",
-			attributes: {
-			email: "community@harness.io",
-			Company: "Community",
-			Name: "Visitor"
-			}
-			}
-	}
-	return targetObj
-}
+
 
 var first = 0;
 var target = "";
@@ -97,11 +27,26 @@ var ckoStatus = false
 var maintenanceMode = false
 var siteMode = "Site"
 var HalloweenMode = true
+var Banner = true
+var backgroundBackup = "#2f81d4"
 
 /* End FF Control */
 
 
 /* START FEATURE FLAGS FUNCTIONS */
+
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+
+
+/* END FEATURE FLAGS FUNCTIONS */
+
+/* FF BUILT-IN */
+
 function HalloweenSongEnabled(flag) {
 	if (ready) {
 		var halloweenSongElement = document.getElementById('HalloweenTheme');
@@ -126,7 +71,7 @@ function Halloween(flag) {
 	var siteElement = $("body").find(".site");
 	var harnessElement = $("body").find("#Harness");
 	var halloweenElement = $("body").find("#Halloween");
-	var body = $("body").css("background-color", "purple");
+
 	HalloweenMode = flag;
 	console.log("Halloween: "+flag)
 	if (maintenanceMode == false){
@@ -137,11 +82,15 @@ function Halloween(flag) {
 			//var playPromise = audio.play();
 
 			$( 'body' ).each(function () {
+				backgroundBackup =$("body").css('backgroundColor');
                     this.style.setProperty( 'background-color', '#512888', 'important' );
-                });
+			});
 		}
 		else{
-			halloweenElement.attr("style","display: none;");
+			$( 'body' ).each(function () {
+				this.style.setProperty( 'background-color', backgroundBackup, 'important' );
+			});
+				halloweenElement.attr("style","display: none;");
 		}
 	}
 
@@ -199,15 +148,8 @@ function Index_SignUp_Enable(flag){
 		$('.switcher-login').attr("style","");
 	}
 }
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
 
-
-/* END FEATURE FLAGS FUNCTIONS */
+/* End FF BUILT-IN */
 	
 var refreshNum=0
 function refresh() {
@@ -650,6 +592,79 @@ function checkMaintenance(){
 
 /* End Harness HOME FF */
 
+function getTarget(){
+	var targetObj
+	if(typeof(Storage) !== "undefined"){
+		if((typeof(window.localStorage.harnessDemoSignUpEmail) !== "undefined") && typeof(window.localStorage.harnessDemoCompany) !== "undefined"){
+			if (window.location.href.indexOf("index.html") > -1) {
+				targetObj = {
+							identifier: 'Guest',
+							name: "Guest",
+							attributes: {
+							email: "community@harness.io",
+							Company: "Community",
+							Name: "Visitor"
+						}
+				}
+				var customer = window.localStorage.harnessCustomer
+				if (customer == 'true') {
+					var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
+					targetObj = {
+						identifier: ffID,
+						name: window.localStorage.harnessDemoSignUpName,
+						attributes: {
+							email: window.localStorage.harnessDemoSignUpEmail,
+							Company: window.localStorage.harnessDemoSignUpCompany,
+							Name: window.localStorage.harnessDemoSignUpName
+						}
+					}
+					menuStyle = 'new_menu'
+				}
+			}
+			else{
+				var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
+				targetObj = {
+						identifier: ffID,
+						name: window.localStorage.harnessDemoSignUpName,
+						attributes: {
+						email: window.localStorage.harnessDemoSignUpEmail,
+						Company: window.localStorage.harnessDemoSignUpCompany,
+						Name: window.localStorage.harnessDemoSignUpName
+					}
+				}
+			}
+			var welcome = $("body").find("#Welcome")
+			welcome.text("");
+			welcome.append("Welcome, <br><strong>"+window.localStorage.harnessDemoSignUpName+"</strong>")
+		}
+		else{
+			targetObj = {
+				identifier: 'Guest',
+				name: "Guest",
+				attributes: {
+				email: "community@harness.io",
+				Company: "Community",
+				Name: "Visitor"
+				}
+				}
+		}
+	}
+	else
+	{
+		targetObj = {
+			identifier: 'Guest',
+			name: "Guest",
+			attributes: {
+			email: "community@harness.io",
+			Company: "Community",
+			Name: "Visitor"
+			}
+			}
+	}
+	return targetObj
+}
+/* Feature Flags EVENTS */
+
 /* Logic to call dynamically Feature Flags methods using their own names */
 
 cf.on(Event.READY, flags => {
@@ -670,7 +685,6 @@ cf.on(Event.READY, flags => {
 
 /* End Logic to call dynamically Feature Flags methods using their own names */
 
-/* Feature Flags EVENTS */
 
 cf.on(Event.CHANGED, flagInfo => {
 	console.log("FLAG Changed:"+JSON.stringify(flagInfo, null, 2));
@@ -705,5 +719,7 @@ cf.on(Event.ERROR, error => {
 	cf.close();
 	// Event happens when connection some error has occurred
 })
+
+
 
 /* End Feature Flags EVENTS */
