@@ -97,6 +97,7 @@ var ckoStatus = false
 var maintenanceMode = false
 var siteMode = "Site"
 var HalloweenMode = true
+var Banner = true
 
 /* End FF Control */
 
@@ -123,10 +124,7 @@ function HalloweenJack(flag) {
 		}
 }
 function Halloween(flag) {
-	var siteElement = $("body").find(".site");
-	var harnessElement = $("body").find("#Harness");
 	var halloweenElement = $("body").find("#Halloween");
-	var body = $("body").css("background-color", "purple");
 	HalloweenMode = flag;
 	console.log("Halloween: "+flag)
 	if (maintenanceMode == false){
