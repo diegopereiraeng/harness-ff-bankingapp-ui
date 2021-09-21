@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-	'eae200d6-fec2-4352-9227-927a67df73ea',
+	'eae200d6-fec2-4352-9227-927a67df73ae',
 	// ^^ UPDATE THE FF SDK KEY HERE ^^ //
 	target
 );
@@ -68,10 +68,7 @@ function HalloweenJack(flag) {
 		}
 }
 function Halloween(flag) {
-	var siteElement = $("body").find(".site");
-	var harnessElement = $("body").find("#Harness");
 	var halloweenElement = $("body").find("#Halloween");
-
 	HalloweenMode = flag;
 	console.log("Halloween: "+flag)
 	if (maintenanceMode == false){
