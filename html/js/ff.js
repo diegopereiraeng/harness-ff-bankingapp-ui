@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-	'7660587d-3341-4f82-8c91-a01e124094ef',
+	'1b1bf94b-9540-4e1c-b58c-7a99b04ec9e3',
 	// ^^ UPDATE THE FF SDK KEY HERE ^^ //
 	//Proposal Change//
 	target
