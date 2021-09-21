@@ -12,78 +12,6 @@ const cf = initialize(
 	target
 );
 
-function getTarget(){
-	var targetObj
-	if(typeof(Storage) !== "undefined"){
-		if((typeof(window.localStorage.harnessDemoSignUpEmail) !== "undefined") && typeof(window.localStorage.harnessDemoCompany) !== "undefined"){
-			if (window.location.href.indexOf("index.html") > -1) {
-				targetObj = {
-							identifier: 'Guest',
-							name: "Guest",
-							attributes: {
-							email: "community@harness.io",
-							Company: "Community",
-							Name: "Visitor"
-						}
-				}
-				var customer = window.localStorage.harnessCustomer
-				if (customer == 'true') {
-					var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
-					targetObj = {
-						identifier: ffID,
-						name: window.localStorage.harnessDemoSignUpName,
-						attributes: {
-							email: window.localStorage.harnessDemoSignUpEmail,
-							Company: window.localStorage.harnessDemoSignUpCompany,
-							Name: window.localStorage.harnessDemoSignUpName
-						}
-					}
-					menuStyle = 'new_menu'
-				}
-			}
-			else{
-				var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
-				targetObj = {
-						identifier: ffID,
-						name: window.localStorage.harnessDemoSignUpName,
-						attributes: {
-						email: window.localStorage.harnessDemoSignUpEmail,
-						Company: window.localStorage.harnessDemoSignUpCompany,
-						Name: window.localStorage.harnessDemoSignUpName
-					}
-				}
-			}
-			var welcome = $("body").find("#Welcome")
-			welcome.text("");
-			welcome.append("Welcome, <br><strong>"+window.localStorage.harnessDemoSignUpName+"</strong>")
-		}
-		else{
-			targetObj = {
-				identifier: 'Guest',
-				name: "Guest",
-				attributes: {
-				email: "community@harness.io",
-				Company: "Community",
-				Name: "Visitor"
-				}
-				}
-		}
-	}
-	else
-	{
-		targetObj = {
-			identifier: 'Guest',
-			name: "Guest",
-			attributes: {
-			email: "community@harness.io",
-			Company: "Community",
-			Name: "Visitor"
-			}
-			}
-	}
-	return targetObj
-}
-
 var first = 0;
 var target = "";
 var close = 0;
@@ -97,11 +25,23 @@ var ckoStatus = false
 var maintenanceMode = false
 var siteMode = "Site"
 var HalloweenMode = true
+var Banner = true
+var backgroundBackup = "#2f81d4"
 
 /* End FF Control */
 
-
 /* START FEATURE FLAGS FUNCTIONS */
+
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+// ----> ADD Your FEATURES HERE <-------- //
+
+/* END FEATURE FLAGS FUNCTIONS */
+
+/* BUILT IN FF */
 function HalloweenSongEnabled(flag) {
 	if (ready) {
 		var halloweenSongElement = document.getElementById('HalloweenTheme');
@@ -123,10 +63,7 @@ function HalloweenJack(flag) {
 		}
 }
 function Halloween(flag) {
-	var siteElement = $("body").find(".site");
-	var harnessElement = $("body").find("#Harness");
 	var halloweenElement = $("body").find("#Halloween");
-	var body = $("body").css("background-color", "purple");
 	HalloweenMode = flag;
 	console.log("Halloween: "+flag)
 	if (maintenanceMode == false){
@@ -137,10 +74,14 @@ function Halloween(flag) {
 			//var playPromise = audio.play();
 
 			$( 'body' ).each(function () {
+					backgroundBackup =$("body").css('backgroundColor');
                     this.style.setProperty( 'background-color', '#512888', 'important' );
                 });
 		}
 		else{
+		$( 'body' ).each(function () {
+			this.style.setProperty( 'background-color', backgroundBackup, 'important' );
+		});
 			halloweenElement.attr("style","display: none;");
 		}
 	}
@@ -173,7 +114,7 @@ function Home_Maintenance(maintenance) {
 			case "Harness":
 				harnessElement.attr("style","display: visibility;");
 				break;
-			}
+		}
 
 		if (Halloween == true ){
 			halloweenElement.attr("style","display: visibility;");
@@ -199,16 +140,9 @@ function Index_SignUp_Enable(flag){
 		$('.switcher-login').attr("style","");
 	}
 }
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
 
+/* BUiLT IN FF */
 
-/* END FEATURE FLAGS FUNCTIONS */
-	
 var refreshNum=0
 function refresh() {
 	console.log("Refresh No: "+refreshNum);
@@ -262,7 +196,7 @@ function processLogin(e) {
 	var harnessDemoCompany = $("body").find("#login-company").val();
 	window.localStorage.setItem('harnessDemoEmail', harnessDemoEmail )
 	window.localStorage.setItem('harnessDemoCompany', harnessDemoCompany )
-	
+
 	if ((window.localStorage.harnessDemoSignUpEmail == harnessDemoEmail) && (window.localStorage.harnessDemoSignUpCompany == harnessDemoCompany)){
 		window.location.href = "./home_new.html";
 	}
@@ -288,7 +222,7 @@ function processSignUp(e) {
 	$("body").find("#modalTitle").text("Success!");
 	$("body").find("#iconModal").text("")
 	$("body").find("#iconModal").append("&#xE876;");
-	
+
 	btModal.click();
 
 	$("body").find("#login-email").val(harnessDemoSignUpEmail)
@@ -337,7 +271,7 @@ function resizeIframe(){
 		} else {
 			iframe.style.width = ($(window).width() - 275) + 'px';
 		}
-		
+
 	});
 	$(window).on('resize', function() {
 		console.log("resizing")
@@ -361,7 +295,7 @@ function showMenuContent(site,name,id){
 		console.log(this)
 		$(this).removeClass(menuSelectedStyle);
 		$(this).removeClass("active");
-	}); 
+	});
 	console.log("Adding Class" + "#"+id+" to site:"+id.val())
 	//Add the clicked button class
 	id.addClass(menuSelected);
@@ -375,7 +309,7 @@ function showMenuContent(site,name,id){
 		currentContent = name
 	}
 	else{
-		
+
 		$("body").find("#iframeContent").attr("style","display: visibility;width:"+($(window).width()) + 'px'+";height:"+($(window).height())+ 'px;');
 		resizeIframe();
 		$("body").find("#iframeContent").attr("src",site);
@@ -421,7 +355,7 @@ function checkMenu(){
 	var paddingClass
 	var iconclass
 	if (menuStyle == 'menu' && window.location.href.indexOf("home_new.html") > -1) {
-		menu = JSON.parse(cf.variation('Home_Menu', '[	{ "type": "fa-users", "name": "Sign in" },   { "type": "fa-eye", "name": "Sign up" },   { "type": "fa-users", "name": "Harness" } ]'))	  
+		menu = JSON.parse(cf.variation('Home_Menu', '[	{ "type": "fa-users", "name": "Sign in" },   { "type": "fa-eye", "name": "Sign up" },   { "type": "fa-users", "name": "Harness" } ]'))
 		paddingClass = "w3-padding"
 		iconclass = ""
 	}else{
@@ -476,7 +410,7 @@ function checkMenu(){
 		var linkID = (value.name).replace(/[^a-zA-Z]/g, "");
 
 		var menuSelected = "w3-"+cf.variation('Home_Menu_Dashboard_Selection_Color',"blue")
-		
+
 		if (value.name == "Home") {
 			if (firstStart) {
 				newLink = $("<a />", {
@@ -500,9 +434,9 @@ function checkMenu(){
 						value: href
 					});
 				}
-				
+
 			}
-			
+
 		}else{
 			newLink = $("<a />", {
 				class: "w3-bar-item w3-button "+paddingClass,
@@ -650,6 +584,78 @@ function checkMaintenance(){
 
 /* End Harness HOME FF */
 
+function getTarget(){
+	var targetObj
+	if(typeof(Storage) !== "undefined"){
+		if((typeof(window.localStorage.harnessDemoSignUpEmail) !== "undefined") && typeof(window.localStorage.harnessDemoCompany) !== "undefined"){
+			if (window.location.href.indexOf("index.html") > -1) {
+				targetObj = {
+							identifier: 'Guest',
+							name: "Guest",
+							attributes: {
+							email: "community@harness.io",
+							Company: "Community",
+							Name: "Visitor"
+						}
+				}
+				var customer = window.localStorage.harnessCustomer
+				if (customer == 'true') {
+					var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
+					targetObj = {
+						identifier: ffID,
+						name: window.localStorage.harnessDemoSignUpName,
+						attributes: {
+							email: window.localStorage.harnessDemoSignUpEmail,
+							Company: window.localStorage.harnessDemoSignUpCompany,
+							Name: window.localStorage.harnessDemoSignUpName
+						}
+					}
+					menuStyle = 'new_menu'
+				}
+			}
+			else{
+				var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
+				targetObj = {
+						identifier: ffID,
+						name: window.localStorage.harnessDemoSignUpName,
+						attributes: {
+						email: window.localStorage.harnessDemoSignUpEmail,
+						Company: window.localStorage.harnessDemoSignUpCompany,
+						Name: window.localStorage.harnessDemoSignUpName
+					}
+				}
+			}
+			var welcome = $("body").find("#Welcome")
+			welcome.text("");
+			welcome.append("Welcome, <br><strong>"+window.localStorage.harnessDemoSignUpName+"</strong>")
+		}
+		else{
+			targetObj = {
+				identifier: 'Guest',
+				name: "Guest",
+				attributes: {
+				email: "community@harness.io",
+				Company: "Community",
+				Name: "Visitor"
+				}
+				}
+		}
+	}
+	else
+	{
+		targetObj = {
+			identifier: 'Guest',
+			name: "Guest",
+			attributes: {
+			email: "community@harness.io",
+			Company: "Community",
+			Name: "Visitor"
+			}
+			}
+	}
+	return targetObj
+}
+
 /* Logic to call dynamically Feature Flags methods using their own names */
 
 cf.on(Event.READY, flags => {
@@ -691,7 +697,7 @@ cf.on(Event.CHANGED, flagInfo => {
 	if (flagInfo.deleted) {
 		console.log('Flag'+flagInfo.flag+' is deleted');
 		//log(JSON.stringify(flagInfo, null, 2))
-	} 
+	}
 });
 cf.on(Event.DISCONNECTED, () => {
   // Event happens when connection is disconnected

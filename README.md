@@ -39,7 +39,7 @@ b(Features):
 
 2 - Change the FF key using your own FF key and Add one or more feature below to this part of the code
 
-3 - Create a Pull Request to the branch dev.
+3 - Create a Pull Request to the branch --> DEV <--
 
 4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
 ex: http://34.121.70.58/Your-Github-User/index.html
@@ -49,33 +49,21 @@ ex: http://34.121.70.58/Your-Github-User/index.html
 ex: function Home_Maintenance(maintenance)...
 flag will be "Home_Maintenance"
 
-### ENABLE OR DISABLE MAINTENANCE MODE (DEPLOYED)
+### ENABLE OR DISABLE MAINTENANCE MODE (BUILT-IN)
 Use Harness Boolean FF to enable or disable maintenance mode.
 
 Flag: Home_Maintenance
 
 Type: Boolean
 
-	function Home_Maintenance(maintenance) {
+### ENABLE SIGNUP LOGIN PAGE (BUILT-IN)
+Use Harness Boolean FF to enable or disable maintenance mode.
 
-		var siteElement = $("body").find(".site");
-		var maintenanceElement = $("body").find("#maintenance");
-		console.log("Maintenance: "+maintenance)
+Flag: Index_SignUp_Enable
 
-		if ( maintenance == 'true'){
-			console.log("Setting Maintenance: "+maintenance)
-			siteElement.attr("style","display: none;");
-			maintenanceElement.attr("style","display: visibility;");
-			$("body").find("#scrolling-partners-section").attr("style","display: none;");
-		}
-		else{
-			siteElement.attr("style","display: visibility;");
-			$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
-			maintenanceElement.attr("style","display: none;");
-			$("body").find("#scrolling-partners-section").attr("style","display: visibility;");
-		}
+Type: String Variant
 
-	}
+Value: (on and off only) all in lowercase
 
 ### CHANGE LOGO IMAGE
 Use Harness String Variant  FF to change logo image
@@ -162,41 +150,6 @@ Value: Message
 		}
 	}
 
-### SHOW YOUTUBE VIDEO (DEPLOYED)
-Use Harness String Variant FF to show your youtube videos for your customer.
-
-Flag: ALL_YOUTUBE_MODAL
-
-Type: String Variant
-
-Value: Youtube video ID
-
-	function ALL_YOUTUBE_MODAL(flag) {
-		if ( flag != "off" && (youtubeStatus != flag) ){
-			console.log("Youtube:"+flag)
-			var btModal = $("body").find("#youtubebtn");
-
-			$('.video-btn').attr("data-src","https://www.youtube.com/embed/"+flag);
-			$('#youtubeID').attr("src","https://www.youtube.com/embed/"+flag+"?modestbranding=1&amp;showinfo=0?start=2");
-			
-			if (youtubeStatus == 'off') {
-				//btModal.click();
-				$("#youtubeModal").modal('show');
-			}
-			youtubeStatus = flag
-			}else{
-				if (flag == 'off' && youtubeStatus != flag){
-					youtubeStatus = flag
-					try{
-						$("#youtubeModal").modal('hide');
-						$('#youtubeID').attr("src","");
-					}catch(e){
-						console.log(e)
-					}
-				}
-		}
-
-	}
 
 ### ADD OR REMOVE MARKETING BANNER
 Use Harness Boolean FF to enable or disable the marketing banner.
