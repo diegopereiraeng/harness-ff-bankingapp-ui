@@ -10,7 +10,9 @@
   --main-Itext-color: #fff;
 }
 
-
+.copyright {
+  font-size: 45.5%; /* font-size 1em = 10px on default browser settings */
+}
 
 body {
 	margin: 0;
@@ -130,8 +132,8 @@ body {
 	overflow: hidden;
 	min-width: 260px;
 	margin-top: 50px;
-	padding: 30px 25px;
-  border-radius: 5px;
+	padding: 20px 25px;
+  	border-radius: 5px;
 	transform-origin: top;
 }
 
@@ -278,8 +280,6 @@ body {
 	transform: translateX(0);
 	transition: all .4s ease-in;
 }
-
-
 
 .btn-login {
 	color: #fbfdff;

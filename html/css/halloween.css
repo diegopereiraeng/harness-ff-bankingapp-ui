@@ -88,19 +88,19 @@
     position:fixed;
     z-index: 10;
     float: left;
-	width: 180px;
-	height: 180px;/*
-	box-sizing: border-box;
-	border: 3px white solid;
-	border-radius: 100%;
-	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-	overflow: hidden;
-	transform: translatey(0px);
-	animation: halloweenWitch 15s infinite linear;
-	img { width: 100%; height: auto; }
-	margin-right: 130px;
-	-webkit-filter: drop-shadow(5px 5px 5px #222);
-      filter: drop-shadow(5px 5px 5px #222);
+    width: 180px;
+    height: 180px;/*
+    box-sizing: border-box;
+    border: 3px white solid;
+    border-radius: 100%;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: halloweenWitch 15s infinite linear;
+    img { width: 100%; height: auto; }
+    margin-right: 130px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
 }
 
 .halloweenVampire {
@@ -110,18 +110,18 @@
     bottom: 180px;
     z-index: 20;
     float: left;
-	width: 180px;
-	height: 180px;/*
-	box-sizing: border-box;
-	border: 3px white solid;
-	border-radius: 100%;
-	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-	overflow: hidden;
-	transform: translatey(0px);
-	animation: halloweenVampire 30s infinite linear;
-	img { width: 100%; height: auto; }
-	-webkit-filter: drop-shadow(5px 5px 5px #222);
-      filter: drop-shadow(5px 5px 5px #222);
+    width: 180px;
+    height: 180px;/*
+    box-sizing: border-box;
+    border: 3px white solid;
+    border-radius: 100%;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: halloweenVampire 30s infinite linear;
+    img { width: 100%; height: auto; }
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
 }
 
 @keyframes halloweenVampire {
@@ -336,14 +336,14 @@
     bottom: 203px;
     z-index: 15;
     float: left;
-	width: 180px;
-	height: 180px;
-	overflow: hidden;
-	transform: translatey(0px);
-	animation: halloweenDoor 30s infinite linear;
-	img { width: 100%; height: auto; }
-	-webkit-filter: drop-shadow(5px 5px 5px #222);
-      filter: drop-shadow(5px 5px 5px #222);
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: halloweenDoor 30s infinite linear;
+    img { width: 100%; height: auto; }
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
 }
 
 @keyframes halloweenDoor {
