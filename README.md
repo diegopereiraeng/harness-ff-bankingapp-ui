@@ -236,5 +236,10 @@ Use Harness String Variant  FF to change all text color.
 		checkSiteColor();
 	}
 
-  
+
+## RUNNING LOCALLY
+
+	BUILD=230
+	docker build -t cv-demo-ui:$BUILD -f Dockerfile .
+	docker run -it -p 8000:80 cv-demo-ui:$BUILD
   
