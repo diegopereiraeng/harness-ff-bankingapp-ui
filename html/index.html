@@ -3,66 +3,22 @@
 <head>
     <title>Harness FF Demo</title>
     <meta charset="UTF-8">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZD3111HXJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-ZZD3111HXJ');
-    </script>
-    <script src="./js/appdynamics.js" charset="UTF-8" type="text/javascript"></script>
-    <script src="//cdn.appdynamics.com/adrum/adrum-21.4.0.3405.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="./seguros.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="./js/home.js"></script>
     <script type="module" src="./js/ff.js"></script>
     <link href="./seguros.css" type="text/css" rel="stylesheet"/>
     <link href="./maintenance.css" type="text/css" rel="stylesheet"/>
+
     <!--Halloween-->
     <link href="./css/halloween.css" type="text/css" rel="stylesheet"/>
+    <script src="./js/halloween.js" type="text/javascript"></script>
 
-    <!-- Mouse -->
+    <!-- JQUERY UI-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    var ready = false
-    document.addEventListener("DOMContentLoaded", function(event) {
-      ready = true
-    });
-    var jackWords = ['Harness','Im Jack','Ouch','Halloween','Candy?','Threats =D','Stop it','Booo'];
-    function randomWord(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];}
-    var lock = false
-    var lockSong = false
-    $( function() {
-        $( "#draggable" ).draggable();
 
-        $('#draggable').click(function(){
-        if (lock == false){
-            lock = true
-            $(".speech-bubble").css("visibility", "visible");
-            $(".speech-bubble").text(randomWord(jackWords));
-            setTimeout(() => {  $(".speech-bubble").css("visibility", "hidden");lock = false; }, 2000);
-
-        }else{
-            console.log("Ouch")
-        }
-        if (lockSong == false){
-            lockSong = true
-            var audio = new Audio('./songs/HalloweenThemeSong.mp3');
-            var playPromise = audio.play();
-            setTimeout(() => {  audio.pause();lockSong = false;}, 25000);
-
-        }
-    }
-    )
-    } );
-
-  </script>
-    <!--Halloween-->
     <!-- Banner Harness Customers -->
     <link rel="icon" href="http://harness.io/favicon.ico">
     <link rel="preload" href="http://harness.io/_next/static/css/188939d7872d14a389aa.css" as="style">
@@ -89,7 +45,7 @@
 
 <body>
 <div id="master">
-    <div id="draggable" class="halloween">
+    <div id="draggable" class="halloween" style="display: none;">
         <div class="speech-bubble" >Ouch</div>
         <div class="head">
             <div class="skull">
@@ -123,32 +79,15 @@
     <div id="Harness" style="display: none;">
         <iframe id="HarnessIO" type="text/html" width="100%" height="5000px" class="embed-responsive-item" src="http://34.94.96.94:3000/"  allowscriptaccess="always" title="Harness - Halloween" allow="autoplay" allowfullscreen></iframe>
     </div>
+
     <!-- Button trigger Youtube modal -->
     <div style="display:none;">
         <!-- Button trigger Youtube modal -->
         <button id="youtubebtn" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/VSHVo9jHMAk" data-target="#youtubeModal" style="display:none;">
         </button>
     </div>
-    <!-- Button HTML (to Trigger Modal) -->
-    <a id="modalButton" href="#myModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
-    <a id="successButton" href="#sucessModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
 
-    <!-- Harness CKO Mode -->
-    <div id="cko2021" style="display: none;">
-        <iframe id="ckoContent" type="text/html" width="100%" height="1000px" class="embed-responsive-item" src="http://34.94.96.94:3000/" id="cko"  allowscriptaccess="always" title="Harness - CKO 2021" allow="autoplay" allowfullscreen></iframe>
-        <!--iframe id="ckoContent" src="http://34.94.96.94:3000/" style="z-index: 2;border: none;display: none;" width="auto" height="auto"></iframe-->
-    </div>
-
-    <!-- Maitenance Mode -->
-    <div id="maintenance" style="display: none;">
-        <div id="error">
-            <div id="box"></div>
-            <h3>Site under Maintenance</h3>
-            <p>Things are a little <span>unstable</span> here</p>
-            <p>I suggest come back later</p>
-        </div>
-        <p></p>
-    </div>
+    <!-- LOGIN PAGE -->
     <div id="Page" style="display: visibility;">
         <div id="qrcode-menu">
             <nav class="w3-sidebar w3-collapse harness-wildcard" style="z-index:3;width:100%;display: none;" id="Sidebar"><br>
@@ -158,7 +97,7 @@
             </nav>
         </div>
         <!-- Top container -->
-        <div id="site"  class="site" style="display: none;">
+        <div id="site"  class="site" style="display: visibility;">
 
             <div id="header-container" class="header">
                 <div id="logo" class="logo">
@@ -168,8 +107,6 @@
                     Banking App
                 </div>
             </div>
-
-
 
             <section id="sectionID" class="forms-section">
 
@@ -225,7 +162,7 @@
             </section>
         </div>
     </div>
-    <!-- Banner ---->
+    <!-- Harness Banner ---->
     <section id="scrolling-partners-section" style="display: visibility;" >
         <div class="CustomerLogos_customers__1ED6S CustomerLogos_bgDot__3gR5l">
             <div class="CustomerLogos_consumerList__3Zo7d">
@@ -285,76 +222,7 @@
             </div>
         </div>
     </section>
-    <!-- Banner ---->
-
-    <!-- Modal ---->
-
-    <!-- Modal HTML -->
-    <div id="myModal" class="modal fade">
-        <div class="modal-dialog modal-confirm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="icon-box">
-                        <em id="iconModal" class="material-icons">&#xE876;</em> <!-- &#xE5CD;  Error-->
-                    </div>
-                    <h4 id="modalTitle" class="modal-title w-100">Awesome!</h4>
-                </div>
-                <div id="ModalMessageBody" class="modal-body">
-                    <p id="ModalMessage" class="text-center">Your Premium Trial will expire soon, click here to choose a package plan.</p>
-                </div>
-                <div class="modal-footer">
-                    <button id="btnModalOk" class="btn btn-success btn-block" data-dismiss="modal">OK</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SUCCESS Modal HTML -->
-
-
-
-    <!--div id="successModal" class="modal fade">
-        <div class="modal-dialog modal-confirm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="icon-box">
-                        <i id="iconModalSucesss" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
-    <!--/div>
-    <h4 id="modalTitleSucesss" class="modal-title w-100">Awesome!</h4>
-    </div>
-    <div class="modal-body">
-    <p id="ModalMessageSucesss" class="text-center">Registered</p>
-    </div>
-    <div class="modal-footer">
-    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
-    </div>
-    </div>
-    </div>
-    </div-->
-
-    <!-- Youtube Modal -->
-    <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="Harness on Youtube" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-
-                <div class="modal-body" >
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9" width="720" height="405" >
-                        <!--iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/VSHVo9jHMAk" title="Captain Canary" allowscriptaccess="always" allow="autoplay" allowfullscreen></iframe-->
-                        <iframe id="youtubeID" type="text/html" width="720" height="405" class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" title="Captain Canary" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-
-
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- End Harness Banner ---->
 </div>
 
 </body>
