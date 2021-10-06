@@ -32,6 +32,12 @@ var backgroundBackup = "#2f81d4"
 
 /* START FEATURE FLAGS FUNCTIONS */
 
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
+
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
