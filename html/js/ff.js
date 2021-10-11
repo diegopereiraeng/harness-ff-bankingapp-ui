@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-	'eae200d6-fec2-4352-9227-927a67df73ea',
+	'214aa9f3-cb33-480c-b8cc-adcba8a22e21',
 	// ^^ UPDATE THE FF SDK KEY HERE ^^ //
 	target
 );
@@ -31,6 +31,12 @@ var backgroundBackup = "#2f81d4"
 /* End FF Control */
 
 /* START FEATURE FLAGS FUNCTIONS */
+
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
 
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
