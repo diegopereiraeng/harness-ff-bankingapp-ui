@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-	'eae200d6-fec2-4352-9227-927a67df73ea',
+	'fb71892f-2c7f-461c-b921-8bbdb0e1383d',
 	// ^^ UPDATE THE FF SDK KEY HERE ^^ //
 	target
 );
@@ -38,6 +38,20 @@ var backgroundBackup = "#2f81d4"
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
 // ----> ADD Your FEATURES HERE <-------- //
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
+
+function Home_Banner(flag) {
+	checkBanner();
+}
+
+function Home_Header_Name(flag) {
+	checkHeader();
+}
+
 
 /* END FEATURE FLAGS FUNCTIONS */
 
