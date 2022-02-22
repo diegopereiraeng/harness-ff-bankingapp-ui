@@ -1,4 +1,4 @@
-import { initialize, Event } from 'https://unpkg.com/@harnessio/ff-javascript-client-sdk@1.4.8/dist/sdk.client.js'
+import { initialize, Event } from 'https://unpkg.com/@harnessio/ff-javascript-client-sdk@1.4.10/dist/sdk.client.js'
 
 var target = getTarget()
 var menuStyle = ''
