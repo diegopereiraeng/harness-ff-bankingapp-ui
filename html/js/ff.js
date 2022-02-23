@@ -7,7 +7,7 @@ var firstStart = true
 var currentContent
 
 const cf = initialize(
-	'eae200d6-fec2-4352-9227-927a67df73ea',
+	'fb71892f-2c7f-461c-b921-8bbdb0e1383d',
 	// ^^ UPDATE THE FF SDK KEY HERE ^^ //
 	target
 );
@@ -32,12 +32,92 @@ var backgroundBackup = "#2f81d4"
 
 /* START FEATURE FLAGS FUNCTIONS */
 
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
-// ----> ADD Your FEATURES HERE <-------- //
+function Home_Logo(logo) {
+	var imgElement = $("body").find("#logo-img");
+	imgElement.attr("height","70");
+	imgElement.attr("src",logo);
+}
+
+function ALL_ALERT_MODAL(flag) {
+	var title
+	var message
+	var type
+	var enabled
+
+	try{
+	var Array = flag.split('|');
+	enabled = Array[0];
+	type = Array[1];
+	title = Array[2];
+	message = Array[3];
+	console.log("title : "+title);
+	console.log("type : "+type);
+	console.log("message : "+message);
+}
+catch{
+	alertArray = flag;
+	enabled = flag
+}
+console.log("ALL_ALERT_MODAL: "+flag);
+console.log("ALL_ALERT_MODAL Enabled: "+enabled);
+
+if ( enabled != "off" && (modalStatus != enabled || modalStatusMessage != message)){
+	modalStatus = enabled
+	modalStatusMessage = message
+
+	var btModal = $("body").find("#modalButton");
+
+	$("body").find("#ModalMessage").text(message);
+	$("body").find("#modalTitle").text(title);
+	$("body").find("#iconModal").text("")
+
+	if (type == "error"){
+		$("body").find("#iconModal").append("&#xE5CD;");
+		document.documentElement.style.setProperty("--modal-color", "#ef513a");
+		document.documentElement.style.setProperty("--modal-roll-color", "#da2c12");
+	}
+	else
+	{
+		$("body").find("#iconModal").append("&#xE876;");
+		document.documentElement.style.setProperty("--modal-color", "#82ce34");
+		document.documentElement.style.setProperty("--modal-roll-color", "#6fb32b");
+	}
+
+	btModal.click();
+
+}else{
+	if (enabled == 'off' && modalStatus != enabled){
+		modalStatus = enabled
+		modalStatusMessage = ""
+	}
+
+	try{
+		$("body").find("#btnModalOk").click();
+	}catch(e){
+		console.log(e)
+	}
+	}
+}
+
+function Home_Banner(flag) {
+	checkBanner();
+}
+
+function Home_Header_Name(flag) {
+	checkHeader();
+}
+
+function Home_Body_Color(flag) {
+	checkSiteColor();
+}
+
+function Index_Body_Color(flag) {
+	checkSiteColor()
+}
+
+function Text_Color_Mode(flag) {
+	checkSiteColor();
+}
 
 /* END FEATURE FLAGS FUNCTIONS */
 
