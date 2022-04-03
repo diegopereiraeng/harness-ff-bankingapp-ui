@@ -42,7 +42,7 @@ b(Features):
 3 - Create a Pull Request to the branch --> DEV <--
 
 4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
-ex: http://34.121.70.58/Your-Github-User/index.html
+ex: http://harness-demo.site/Your-Github-User/index.html
 
 5 - Create the flags using the same name of functions below.
 
