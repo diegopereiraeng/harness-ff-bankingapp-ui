@@ -12,13 +12,13 @@ ex:
 	    </div>
 
 	c - <div id="logo" class="logo">
-	        <img id="logo-img" src="https://harness.io/wp-content/themes/harnessio/assets/images/harness-logo.svg" height=40 ">
+	        <img id="logo-img" alt="logo" src="https://harness.io/wp-content/themes/harnessio/assets/images/harness-logo.svg" height=40 ">
 	    </div>
 
 2 - Save as new Branch
 3 - Create a Pull Request to Dev
 4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
-ex: http://34.121.70.58/Your-Github-User/index.html
+ex: http://harness-demo.site/Your-Github-User/index.html
 
 Thanks!
 
@@ -42,7 +42,7 @@ b(Features):
 3 - Create a Pull Request to the branch --> DEV <--
 
 4 - Wait for the Build/Deploy process, and them you should be able to connect into your environment:
-ex: http://34.121.70.58/Your-Github-User/index.html
+ex: http://harness-demo.site/Your-Github-User/index.html
 
 5 - Create the flags using the same name of functions below.
 
@@ -236,5 +236,10 @@ Use Harness String Variant  FF to change all text color.
 		checkSiteColor();
 	}
 
-  
+
+## RUNNING LOCALLY
+
+	BUILD=230
+	docker build -t cv-demo-ui:$BUILD -f Dockerfile .
+	docker run -it -p 8000:80 cv-demo-ui:$BUILD
   
