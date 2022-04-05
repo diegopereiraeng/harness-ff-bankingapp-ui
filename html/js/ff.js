@@ -25,7 +25,9 @@ function getTarget(){
                             Company: "Community",
                             Name: "Visitor",
                             timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                            lastUpdated: Date()
+                            platform: navigator.userAgentData.platform,
+                            mobile: navigator.userAgentData.mobile,
+                            language: navigator.language
                         }
                 }
                 var customer = window.localStorage.harnessCustomer
@@ -39,7 +41,9 @@ function getTarget(){
                             Company: window.localStorage.harnessDemoSignUpCompany,
                             Name: window.localStorage.harnessDemoSignUpName,
                             timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                            lastUpdated: Date()
+                            platform: navigator.userAgentData.platform,
+                            mobile: navigator.userAgentData.mobile,
+                            language: navigator.language
                         }
                     }
                     menuStyle = 'new_menu'
@@ -55,7 +59,9 @@ function getTarget(){
                         Company: window.localStorage.harnessDemoSignUpCompany,
                         Name: window.localStorage.harnessDemoSignUpName,
                         timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                        lastUpdated: Date()
+                        platform: navigator.userAgentData.platform,
+                        mobile: navigator.userAgentData.mobile,
+                        language: navigator.language
                     }
                 }
             }
@@ -74,7 +80,9 @@ function getTarget(){
                     Company: "Community",
                     Name: "Visitor",
                     timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                    lastUpdated: Date()
+                    platform: navigator.userAgentData.platform,
+                    mobile: navigator.userAgentData.mobile,
+                    language: navigator.language
                   }
                 }
         }
@@ -89,7 +97,9 @@ function getTarget(){
                 Company: "Community",
                 Name: "Visitor",
                 timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                lastUpdated: Date()
+                platform: navigator.userAgentData.platform,
+                mobile: navigator.userAgentData.mobile,
+                language: navigator.language
               }
             }
     }
