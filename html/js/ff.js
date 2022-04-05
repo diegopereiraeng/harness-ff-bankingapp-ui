@@ -36,7 +36,8 @@ function getTarget(){
                         attributes: {
                             email: window.localStorage.harnessDemoSignUpEmail,
                             Company: window.localStorage.harnessDemoSignUpCompany,
-                            Name: window.localStorage.harnessDemoSignUpName
+                            Name: window.localStorage.harnessDemoSignUpName,
+                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
                         }
                     }
                     menuStyle = 'new_menu'
@@ -50,7 +51,8 @@ function getTarget(){
                         attributes: {
                         email: window.localStorage.harnessDemoSignUpEmail,
                         Company: window.localStorage.harnessDemoSignUpCompany,
-                        Name: window.localStorage.harnessDemoSignUpName
+                        Name: window.localStorage.harnessDemoSignUpName,
+                        timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
                     }
                 }
             }
