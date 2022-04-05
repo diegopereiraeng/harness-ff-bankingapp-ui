@@ -23,7 +23,11 @@ function getTarget(){
                             attributes: {
                             email: "community@harness.io",
                             Company: "Community",
-                            Name: "Visitor"
+                            Name: "Visitor",
+                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                            platform: navigator.userAgentData.platform,
+                            mobile: navigator.userAgentData.mobile,
+                            language: navigator.language
                         }
                 }
                 var customer = window.localStorage.harnessCustomer
@@ -35,7 +39,11 @@ function getTarget(){
                         attributes: {
                             email: window.localStorage.harnessDemoSignUpEmail,
                             Company: window.localStorage.harnessDemoSignUpCompany,
-                            Name: window.localStorage.harnessDemoSignUpName
+                            Name: window.localStorage.harnessDemoSignUpName,
+                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                            platform: navigator.userAgentData.platform,
+                            mobile: navigator.userAgentData.mobile,
+                            language: navigator.language
                         }
                     }
                     menuStyle = 'new_menu'
@@ -49,11 +57,15 @@ function getTarget(){
                         attributes: {
                         email: window.localStorage.harnessDemoSignUpEmail,
                         Company: window.localStorage.harnessDemoSignUpCompany,
-                        Name: window.localStorage.harnessDemoSignUpName
+                        Name: window.localStorage.harnessDemoSignUpName,
+                        timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                        platform: navigator.userAgentData.platform,
+                        mobile: navigator.userAgentData.mobile,
+                        language: navigator.language
                     }
                 }
             }
-            
+
             var welcome = $("body").find("#Welcome")
             welcome.text("");
             welcome.append("Welcome, <br><strong>"+window.localStorage.harnessDemoSignUpName+"</strong>")
@@ -66,7 +78,11 @@ function getTarget(){
                   attributes: {
                     email: "community@harness.io",
                     Company: "Community",
-                    Name: "Visitor"
+                    Name: "Visitor",
+                    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                    platform: navigator.userAgentData.platform,
+                    mobile: navigator.userAgentData.mobile,
+                    language: navigator.language
                   }
                 }
         }
@@ -79,7 +95,11 @@ function getTarget(){
               attributes: {
                 email: "community@harness.io",
                 Company: "Community",
-                Name: "Visitor"
+                Name: "Visitor",
+                timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                platform: navigator.userAgentData.platform,
+                mobile: navigator.userAgentData.mobile,
+                language: navigator.language
               }
             }
     }
