@@ -20,11 +20,11 @@ function getTarget(){
                 targetObj = {
                             identifier: 'Guest',
                             name: "Guest",
+                            timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
                             attributes: {
                             email: "community@harness.io",
                             Company: "Community",
-                            Name: "Visitor",
-                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
+                            Name: "Visitor"
                         }
                 }
                 var customer = window.localStorage.harnessCustomer
@@ -33,11 +33,11 @@ function getTarget(){
                     targetObj = {
                         identifier: ffID,
                         name: window.localStorage.harnessDemoSignUpName,
+                        timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
                         attributes: {
                             email: window.localStorage.harnessDemoSignUpEmail,
                             Company: window.localStorage.harnessDemoSignUpCompany,
-                            Name: window.localStorage.harnessDemoSignUpName,
-                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
+                            Name: window.localStorage.harnessDemoSignUpName
                         }
                     }
                     menuStyle = 'new_menu'
@@ -48,11 +48,11 @@ function getTarget(){
                 targetObj = {
                         identifier: ffID,
                         name: window.localStorage.harnessDemoSignUpName,
+                        timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
                         attributes: {
                         email: window.localStorage.harnessDemoSignUpEmail,
                         Company: window.localStorage.harnessDemoSignUpCompany,
-                        Name: window.localStorage.harnessDemoSignUpName,
-                        timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
+                        Name: window.localStorage.harnessDemoSignUpName
                     }
                 }
             }
@@ -66,11 +66,11 @@ function getTarget(){
             targetObj = {
                   identifier: 'Guest',
                   name: "Guest",
+                  timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
                   attributes: {
                     email: "community@harness.io",
                     Company: "Community",
-                    Name: "Visitor",
-                    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
+                    Name: "Visitor"
                   }
                 }
         }
@@ -80,11 +80,11 @@ function getTarget(){
         targetObj = {
               identifier: 'Guest',
               name: "Guest",
+              timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
               attributes: {
                 email: "community@harness.io",
                 Company: "Community",
-                Name: "Visitor",
-                timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
+                Name: "Visitor"
               }
             }
     }
