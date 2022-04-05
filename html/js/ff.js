@@ -24,7 +24,7 @@ function getTarget(){
                             email: "community@harness.io",
                             Company: "Community",
                             Name: "Visitor",
-			    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
+                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
                         }
                 }
                 var customer = window.localStorage.harnessCustomer
@@ -54,7 +54,7 @@ function getTarget(){
                     }
                 }
             }
-            
+
             var welcome = $("body").find("#Welcome")
             welcome.text("");
             welcome.append("Welcome, <br><strong>"+window.localStorage.harnessDemoSignUpName+"</strong>")
@@ -68,7 +68,7 @@ function getTarget(){
                     email: "community@harness.io",
                     Company: "Community",
                     Name: "Visitor",
-		    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)  
+                    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
                   }
                 }
         }
@@ -82,7 +82,7 @@ function getTarget(){
                 email: "community@harness.io",
                 Company: "Community",
                 Name: "Visitor",
-		timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
+                timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
               }
             }
     }
@@ -207,9 +207,9 @@ function BackendAPI(flag){
                 .always(function() {
                 console.log( "finished" );
                 });
-            
+
             // Perform other work here ...
-            
+
             // Set another completion function for the request above
             jqxhr.always(function() {
                 console.log( "payment transaction finished" );
@@ -238,14 +238,14 @@ function Customer_Mode(flag){
 }
 
 function Home_Menu_Dashboard_Selection_Color(flag) {
-    
+
     $('.harness-dashboard').each(function(){
         console.log("Color Selected "+flag)
         $(this).removeClass(menuSelectedStyle);
         $(this).addClass("w3-"+flag);
 
     });
-    
+
     $('.active').removeClass(menuSelectedStyle);
     console.log("menu selected old color: "+menuSelectedStyle+" - menu selected new color:"+"w3-"+flag)
     $('.active').addClass("w3-"+flag);
@@ -272,7 +272,7 @@ function Home_Menu_New(flag){
 	}else{
 		console.log("New Menu = false")
 	}
-    
+
 }
 
 function Index_SignUp_Enable(flag){
@@ -323,7 +323,7 @@ function ALL_ALERT_MODAL(flag) {
         $("body").find("#ModalMessage").empty();
         $("body").find("#ModalMessage").append(message);
         $("body").find("#modalTitle").text(title);
-        
+
         $("body").find("#iconModal").text("")
         if (type == "error"){
             $("body").find("#iconModal").append("&#xE5CD;");
@@ -338,14 +338,14 @@ function ALL_ALERT_MODAL(flag) {
         }
         btModal.click();
     }else{
-        
+
         try{
             if (enabled == 'off' && modalStatus != enabled){
                 modalStatus = enabled
                 modalStatusMessage = ""
             }
             $("body").find("#btnModalOk").click();
-            
+
         }catch(e){
             console.log(e)
         }
@@ -802,7 +802,7 @@ function checkMenuV2(flag){
 }
 
 /* END FEATURE FLAGS FUNCTIONS */
-    
+
 
 var refreshNum=0
 function refresh() {
@@ -884,7 +884,7 @@ function processLogin(e) {
     var harnessDemoCompany = $("body").find("#login-company").val();
     window.localStorage.setItem('harnessDemoEmail', harnessDemoEmail )
     window.localStorage.setItem('harnessDemoCompany', harnessDemoCompany )
-    
+
     if ((window.localStorage.harnessDemoSignUpEmail == harnessDemoEmail) && (window.localStorage.harnessDemoSignUpCompany == harnessDemoCompany)){
         window.location.href = "./home_new.html";
     }
@@ -911,7 +911,7 @@ function processSignUp(e) {
     $("body").find("#modalTitle").text("Success!");
     $("body").find("#iconModal").text("")
     $("body").find("#iconModal").append("&#xE876;");
-    
+
     btModal.click();
 
 
@@ -975,7 +975,7 @@ function resizeIframe(){
         } else {
             iframe.style.width = ($(window).width() - 275) + 'px';
         }
-        
+
     });
     $(window).on('resize', function() {
         console.log("resizing")
@@ -1002,7 +1002,7 @@ function showMenuContent(site,name,id){
         console.log(this)
         $(this).removeClass(menuSelectedStyle);
         $(this).removeClass("active");
-    }); 
+    });
 
     console.log("Adding Class" + "#"+id+" to site:"+id.val())
     //Add the clicked button class
@@ -1018,7 +1018,7 @@ function showMenuContent(site,name,id){
         currentContent = name
     }
     else{
-        
+
         $("body").find("#iframeContent").attr("style","display: visibility;width:"+($(window).width()) + 'px'+";height:"+$(window).height()+ 'px;');
         resizeIframe();
         $("body").find("#iframeContent").attr("src",site);
@@ -1139,7 +1139,7 @@ function checkDashboard(){
     var dashboardElement = $("body").find("#dashboard");
     const crypto = window.crypto || window.msCrypto;
     var array = new Uint32Array(1);
-    
+
 
     if (dashboardArray.includes("Messages")){
         let randomMessages = Math.floor(crypto.getRandomValues(array) * (100 - 1) + 1);
