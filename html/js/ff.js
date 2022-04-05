@@ -23,7 +23,8 @@ function getTarget(){
                             attributes: {
                             email: "community@harness.io",
                             Company: "Community",
-                            Name: "Visitor"
+                            Name: "Visitor",
+			    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
                         }
                 }
                 var customer = window.localStorage.harnessCustomer
@@ -66,7 +67,8 @@ function getTarget(){
                   attributes: {
                     email: "community@harness.io",
                     Company: "Community",
-                    Name: "Visitor"
+                    Name: "Visitor",
+		    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)  
                   }
                 }
         }
@@ -79,7 +81,8 @@ function getTarget(){
               attributes: {
                 email: "community@harness.io",
                 Company: "Community",
-                Name: "Visitor"
+                Name: "Visitor",
+		timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone)
               }
             }
     }
