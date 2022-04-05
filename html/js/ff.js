@@ -20,7 +20,7 @@ function getTarget(){
                 targetObj = {
                             identifier: 'Guest',
                             name: "Guest",
-                            timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
                             attributes: {
                             email: "community@harness.io",
                             Company: "Community",
@@ -33,7 +33,7 @@ function getTarget(){
                     targetObj = {
                         identifier: ffID,
                         name: window.localStorage.harnessDemoSignUpName,
-                        timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                        timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
                         attributes: {
                             email: window.localStorage.harnessDemoSignUpEmail,
                             Company: window.localStorage.harnessDemoSignUpCompany,
@@ -48,7 +48,7 @@ function getTarget(){
                 targetObj = {
                         identifier: ffID,
                         name: window.localStorage.harnessDemoSignUpName,
-                        timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                        timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
                         attributes: {
                         email: window.localStorage.harnessDemoSignUpEmail,
                         Company: window.localStorage.harnessDemoSignUpCompany,
@@ -66,7 +66,7 @@ function getTarget(){
             targetObj = {
                   identifier: 'Guest',
                   name: "Guest",
-                  timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                  timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
                   attributes: {
                     email: "community@harness.io",
                     Company: "Community",
@@ -80,7 +80,7 @@ function getTarget(){
         targetObj = {
               identifier: 'Guest',
               name: "Guest",
-              timezone: timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+              timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
               attributes: {
                 email: "community@harness.io",
                 Company: "Community",
