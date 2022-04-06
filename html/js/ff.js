@@ -13,34 +13,18 @@ const cf = initialize(
 
 function defineTargetObject(id,name,company,email){
     var targetObj
-    var navigatorInfo = navigator.userAgentData
-    if(Object.prototype.hasOwnProperty.call(navigatorInfo,'platform')){
-        targetObj = {
-                identifier: id,
-                name: name,
-                attributes: {
-                    email: email,
-                    Company: company,
-                    Name: name,
-                    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                    platform: navigatorInfo.platform,
-                    mobile: navigatorInfo.mobile,
-                    language: navigator.language
-                }
-        }
-    }
-    else {
-        targetObj = {
-            identifier: id,
-            name: name,
-            attributes: {
-                email: email,
-                Company: company,
-                Name: name,
-                timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                mobile: navigatorInfo.mobile,
-                language: navigator.language
-            }
+    let platform = navigator?.userAgentData?.platform || navigator?.platform || 'unknown'
+    targetObj = {
+        identifier: id,
+        name: name,
+        attributes: {
+            email: email,
+            Company: company,
+            Name: name,
+            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+            platform: platform,
+            mobile: navigator?.userAgentData?.mobile || navigator?.mobile || 'unknown' ,
+            language: navigator.language
         }
     }
     return targetObj
