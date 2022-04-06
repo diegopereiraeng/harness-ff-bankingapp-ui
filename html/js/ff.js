@@ -25,8 +25,6 @@ function getTarget(){
                             Company: "Community",
                             Name: "Visitor",
                             timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                            platform: navigator.userAgentData.platform,
-                            mobile: navigator.userAgentData.mobile,
                             language: navigator.language
                         }
                 }
@@ -41,8 +39,6 @@ function getTarget(){
                             Company: window.localStorage.harnessDemoSignUpCompany,
                             Name: window.localStorage.harnessDemoSignUpName,
                             timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                            platform: navigator.userAgentData.platform,
-                            mobile: navigator.userAgentData.mobile,
                             language: navigator.language
                         }
                     }
@@ -59,8 +55,6 @@ function getTarget(){
                         Company: window.localStorage.harnessDemoSignUpCompany,
                         Name: window.localStorage.harnessDemoSignUpName,
                         timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                        platform: navigator.userAgentData.platform,
-                        mobile: navigator.userAgentData.mobile,
                         language: navigator.language
                     }
                 }
@@ -80,8 +74,6 @@ function getTarget(){
                     Company: "Community",
                     Name: "Visitor",
                     timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                    platform: navigator.userAgentData.platform,
-                    mobile: navigator.userAgentData.mobile,
                     language: navigator.language
                   }
                 }
@@ -97,8 +89,6 @@ function getTarget(){
                 Company: "Community",
                 Name: "Visitor",
                 timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                platform: navigator.userAgentData.platform,
-                mobile: navigator.userAgentData.mobile,
                 language: navigator.language
               }
             }
