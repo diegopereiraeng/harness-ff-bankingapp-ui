@@ -13,7 +13,7 @@ const cf = initialize(
 
 function defineTargetObject(id,name,company,email){
     var targetObj
-    if(typeof(navigator.userAgentData.platform) !== "undefined"){
+    if(navigator.userAgentData.platform !== "undefined"){
         targetObj = {
                 identifier: id,
                 name: name,
