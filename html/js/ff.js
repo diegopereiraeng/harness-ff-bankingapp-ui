@@ -11,53 +11,42 @@ const cf = initialize(
     target
 );
 
+function defineTargetObject(id,name,company,email){
+    var targetObj
+    let platform = navigator?.userAgentData?.platform || navigator?.platform || 'unknown'
+    targetObj = {
+        identifier: id,
+        name: name,
+        attributes: {
+            email: email,
+            Company: company,
+            Name: name,
+            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+            platform: platform,
+            mobile: navigator?.userAgentData?.mobile || navigator?.mobile || 'unknown' ,
+            language: navigator.language
+        }
+    }
+    return targetObj
+}
+
 function getTarget(){
     var targetObj
     if(typeof(Storage) !== "undefined"){
 
         if((typeof(window.localStorage.harnessDemoSignUpEmail) !== "undefined") && typeof(window.localStorage.harnessDemoCompany) !== "undefined"){
             if (window.location.href.indexOf("index.html") > -1) {
-                targetObj = {
-                            identifier: 'Guest',
-                            name: "Guest",
-                            attributes: {
-                            email: "community@harness.io",
-                            Company: "Community",
-                            Name: "Visitor",
-                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                            language: navigator.language
-                        }
-                }
+                targetObj = defineTargetObject('Guest','Guest','Community',"community@harness.io")
                 var customer = window.localStorage.harnessCustomer
                 if (customer == 'true') {
                     var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
-                    targetObj = {
-                        identifier: ffID,
-                        name: window.localStorage.harnessDemoSignUpName,
-                        attributes: {
-                            email: window.localStorage.harnessDemoSignUpEmail,
-                            Company: window.localStorage.harnessDemoSignUpCompany,
-                            Name: window.localStorage.harnessDemoSignUpName,
-                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                            language: navigator.language
-                        }
-                    }
+                    targetObj = defineTargetObject(ffID,window.localStorage.harnessDemoSignUpName,window.localStorage.harnessDemoSignUpCompany,window.localStorage.harnessDemoSignUpEmail)
                     menuStyle = 'new_menu'
                 }
             }
             else{
                 var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
-                targetObj = {
-                        identifier: ffID,
-                        name: window.localStorage.harnessDemoSignUpName,
-                        attributes: {
-                        email: window.localStorage.harnessDemoSignUpEmail,
-                        Company: window.localStorage.harnessDemoSignUpCompany,
-                        Name: window.localStorage.harnessDemoSignUpName,
-                        timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                        language: navigator.language
-                    }
-                }
+                targetObj = defineTargetObject(ffID,window.localStorage.harnessDemoSignUpName,window.localStorage.harnessDemoSignUpCompany,window.localStorage.harnessDemoSignUpEmail)
             }
 
             var welcome = $("body").find("#Welcome")
@@ -66,32 +55,12 @@ function getTarget(){
 
         }
         else{
-            targetObj = {
-                  identifier: 'Guest',
-                  name: "Guest",
-                  attributes: {
-                    email: "community@harness.io",
-                    Company: "Community",
-                    Name: "Visitor",
-                    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                    language: navigator.language
-                  }
-                }
+            targetObj = defineTargetObject('Guest','Guest','Community',"community@harness.io")
         }
     }
     else
     {
-        targetObj = {
-              identifier: 'Guest',
-              name: "Guest",
-              attributes: {
-                email: "community@harness.io",
-                Company: "Community",
-                Name: "Visitor",
-                timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                language: navigator.language
-              }
-            }
+        targetObj = defineTargetObject('Guest','Guest','Community',"community@harness.io")
     }
     return targetObj
 }
