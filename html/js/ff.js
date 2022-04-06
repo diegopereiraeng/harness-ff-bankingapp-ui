@@ -17,7 +17,8 @@ function getTarget(){
 
         if((typeof(window.localStorage.harnessDemoSignUpEmail) !== "undefined") && typeof(window.localStorage.harnessDemoCompany) !== "undefined"){
             if (window.location.href.indexOf("index.html") > -1) {
-                targetObj = {
+		    if(typeof(navigator.userAgentData.platform) !== "undefined"){
+		    	targetObj = {
                             identifier: 'Guest',
                             name: "Guest",
                             attributes: {
@@ -29,41 +30,88 @@ function getTarget(){
                             mobile: navigator.userAgentData.mobile,
                             language: navigator.language
                         }
+		    }
+		    else {
+			targetObj = {
+                            identifier: 'Guest',
+                            name: "Guest",
+                            attributes: {
+                            email: "community@harness.io",
+                            Company: "Community",
+                            Name: "Visitor",
+                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+                            mobile: navigator.userAgentData.mobile,
+                            language: navigator.language
+                        }
+		    }
+                
                 }
                 var customer = window.localStorage.harnessCustomer
                 if (customer == 'true') {
                     var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
-                    targetObj = {
-                        identifier: ffID,
-                        name: window.localStorage.harnessDemoSignUpName,
-                        attributes: {
-                            email: window.localStorage.harnessDemoSignUpEmail,
-                            Company: window.localStorage.harnessDemoSignUpCompany,
-                            Name: window.localStorage.harnessDemoSignUpName,
-                            timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                            platform: navigator.userAgentData.platform,
-                            mobile: navigator.userAgentData.mobile,
-                            language: navigator.language
-                        }
-                    }
+		    if(typeof(navigator.userAgentData.platform) !== "undefined"){
+			    targetObj = {
+				identifier: ffID,
+				name: window.localStorage.harnessDemoSignUpName,
+				attributes: {
+				    email: window.localStorage.harnessDemoSignUpEmail,
+				    Company: window.localStorage.harnessDemoSignUpCompany,
+				    Name: window.localStorage.harnessDemoSignUpName,
+				    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+				    platform: navigator.userAgentData.platform,
+				    mobile: navigator.userAgentData.mobile,
+				    language: navigator.language
+				}
+			    }
+		    }
+		    else{
+		    	targetObj = {
+				identifier: ffID,
+				name: window.localStorage.harnessDemoSignUpName,
+				attributes: {
+				    email: window.localStorage.harnessDemoSignUpEmail,
+				    Company: window.localStorage.harnessDemoSignUpCompany,
+				    Name: window.localStorage.harnessDemoSignUpName,
+				    timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+				    mobile: navigator.userAgentData.mobile,
+				    language: navigator.language
+				}
+			    }
+		    }
                     menuStyle = 'new_menu'
                 }
             }
             else{
                 var ffID = (window.localStorage.harnessDemoSignUpEmail).replace(/[^a-zA-Z]/g, "");
-                targetObj = {
-                        identifier: ffID,
-                        name: window.localStorage.harnessDemoSignUpName,
-                        attributes: {
-                        email: window.localStorage.harnessDemoSignUpEmail,
-                        Company: window.localStorage.harnessDemoSignUpCompany,
-                        Name: window.localStorage.harnessDemoSignUpName,
-                        timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                        platform: navigator.userAgentData.platform,
-                        mobile: navigator.userAgentData.mobile,
-                        language: navigator.language
-                    }
-                }
+		if(typeof(navigator.userAgentData.platform) !== "undefined"){
+			targetObj = {
+				identifier: ffID,
+				name: window.localStorage.harnessDemoSignUpName,
+				attributes: {
+				email: window.localStorage.harnessDemoSignUpEmail,
+				Company: window.localStorage.harnessDemoSignUpCompany,
+				Name: window.localStorage.harnessDemoSignUpName,
+				timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+				platform: navigator.userAgentData.platform,
+				mobile: navigator.userAgentData.mobile,
+				language: navigator.language
+			    }
+			}
+		}
+	         else {
+		 	targetObj = {
+				identifier: ffID,
+				name: window.localStorage.harnessDemoSignUpName,
+				attributes: {
+				email: window.localStorage.harnessDemoSignUpEmail,
+				Company: window.localStorage.harnessDemoSignUpCompany,
+				Name: window.localStorage.harnessDemoSignUpName,
+				timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
+				mobile: navigator.userAgentData.mobile,
+				language: navigator.language
+			    }
+			}
+		 }
             }
 
             var welcome = $("body").find("#Welcome")
