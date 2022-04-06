@@ -13,7 +13,8 @@ const cf = initialize(
 
 function defineTargetObject(id,name,company,email){
     var targetObj
-    if(navigator.userAgentData.platform !== "undefined"){
+    var navigatorInfo = navigator.userAgentData
+    if(typeof(navigatorInfo.platform) !== "undefined"){
         targetObj = {
                 identifier: id,
                 name: name,
@@ -22,8 +23,8 @@ function defineTargetObject(id,name,company,email){
                     Company: company,
                     Name: name,
                     timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                    platform: navigator.userAgentData.platform,
-                    mobile: navigator.userAgentData.mobile,
+                    platform: navigatorInfo.platform,
+                    mobile: navigatorInfo.mobile,
                     language: navigator.language
                 }
         }
@@ -37,7 +38,7 @@ function defineTargetObject(id,name,company,email){
                 Company: company,
                 Name: name,
                 timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone),
-                mobile: navigator.userAgentData.mobile,
+                mobile: navigatorInfo.mobile,
                 language: navigator.language
             }
         }
