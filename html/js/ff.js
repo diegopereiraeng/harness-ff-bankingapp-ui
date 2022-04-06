@@ -14,7 +14,7 @@ const cf = initialize(
 function defineTargetObject(id,name,company,email){
     var targetObj
     var navigatorInfo = navigator.userAgentData
-    if(navigatorInfo.hasOwnProperty('platform')){
+    if(Object.prototype.hasOwnProperty.call(navigatorInfo,'platform')){
         targetObj = {
                 identifier: id,
                 name: name,
