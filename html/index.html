@@ -3,60 +3,27 @@
 <head>
     <title>Harness FF Demo</title>
     <meta charset="UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZD3111HXJ"></script>
     <script src="./js/appdynamics.js" charset="UTF-8" type="text/javascript"></script>
     <script src="//cdn.appdynamics.com/adrum/adrum-21.4.0.3405.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script src="./seguros.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="./js/home.js"></script>
     <script type="module" src="./js/ff.js"></script>
-    <link href="./seguros.css" type="text/css" rel="stylesheet"/>
-    <link href="./maintenance.css" type="text/css" rel="stylesheet"/>
-     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZD3111HXJ"></script>
+    <script type="text/javascript" src="js/qrcode.js"></script>
 
+    <link href="./seguros.css" type="text/css" rel="stylesheet"/>
+    <script src="./seguros.js" type="text/javascript"></script>
+    <link href="./maintenance.css" type="text/css" rel="stylesheet"/>
     <!--Halloween-->
     <link href="./css/halloween.css" type="text/css" rel="stylesheet"/>
-
+    <script src="./js/halloween.js" type="text/javascript"></script>
     <!-- Mouse -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    var ready = false
-    document.addEventListener("DOMContentLoaded", function(event) {
-      ready = true
-    });
-    var jackWords = ['Im Jack','Ouch','Halloween','Candy?','Threats =D','Stop it','Booo'];
-    function randomWord(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];}
-    var lock = false
-    var lockSong = false
-    $( function() {
-        $( "#draggable" ).draggable();
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha384-JPbtLYL10d/Z1crlc6GGGGM3PavCzzoUJ1UxH0bXHOfguWHQ6XAWrIzW+MBGGXe5%"></script>
 
-        $('#draggable').click(function(){
-        if (lock == false){
-            lock = true
-            $(".speech-bubble").css("visibility", "visible");
-            $(".speech-bubble").text(randomWord(jackWords));
-            setTimeout(() => {  $(".speech-bubble").css("visibility", "hidden");lock = false; }, 2000);
-
-        }else{
-            console.log("Ouch")
-        }
-        if (lockSong == false){
-            lockSong = true
-            var audio = new Audio('./songs/HalloweenThemeSong.mp3');
-            var playPromise = audio.play();
-            setTimeout(() => {  audio.pause();lockSong = false;}, 25000);
-
-        }
-    }
-    )
-    } );
-
-  </script>
-    <!--Halloween-->
+    <!--End Halloween-->
     <!-- Banner Harness Customers -->
     <link rel="icon" href="http://harness.io/favicon.ico">
     <link rel="preload" href="http://harness.io/_next/static/css/188939d7872d14a389aa.css" as="style">
@@ -65,25 +32,23 @@
     <link rel="stylesheet" href="http://harness.io/_next/static/css/2176213be4f33ba4a471.css" data-n-p="">
     <link rel="stylesheet" href="./harness-banner.css" data-n-p="">
     <!-- End Banner Harness Customers -->
-
     <!-- Modal -->
     <link href="./alert.css" type="text/css" rel="stylesheet"/>
+    <link href="./css/qrcode.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
     <!-- Youtube -->
     <link href="./youtube.css" type="text/css" rel="stylesheet"/>
     <script type="module" src="./js/youtube.js"></script>
-
 </head>
 
 <body>
 <div id="master">
-    <div id="draggable" class="halloween" style="display: none;">
+    <div id="draggable" class="halloween">
         <div class="speech-bubble" >Ouch</div>
         <div class="head">
             <div class="skull">
@@ -125,6 +90,8 @@
     </div>
     <!-- Button HTML (to Trigger Modal) -->
     <a id="modalButton" href="#myModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
+    <label id="qrButton" for="mpo-modal-controller" class="btn" style="display:none;">open modal</label>
+
     <a id="successButton" href="#sucessModal" class="trigger-btn" data-toggle="modal" style="display:none;"></a>
 
     <!-- Harness CKO Mode -->
@@ -144,6 +111,7 @@
         <p></p>
     </div>
     <div id="Page" style="display: visibility;">
+
         <div id="qrcode-menu">
             <nav class="w3-sidebar w3-collapse harness-wildcard" style="z-index:3;width:100%;display: none;" id="Sidebar"><br>
                 <div id="qrcode" class="logo">
@@ -187,7 +155,6 @@
                                 </div>
                             </fieldset>
                             <button type="submit" class="btn-login">Login</button>
-                            <span class="copyright">By: Diego Pereira</span>
                         </form>
                     </div>
                     <div class="form-wrapper" id="signupForm"  style="display:none;">
@@ -271,7 +238,7 @@
                 </div>
             </div>
             <div class="CustomerLogos_btnContainer__1iJAz">
-                <a href="/customers/">
+                <a href="https://harness.io/customers/">
                     <button type="button" class="ant-btn CustomerLogos_btnLight__tvE6y">
                         <span>Meet Our Customers</span>
                     </button>
@@ -303,28 +270,55 @@
         </div>
     </div>
 
-    <!-- SUCCESS Modal HTML -->
+    <div class="mpo-modal">
+        <input type="checkbox" id="mpo-modal-controller" class="mpo-modal-open" hidden>
+        <div class="mpo-modal-wrap">
+            <label for="mpo-modal-controller" class="mpo-modal-overlay"></label>
+            <div class="mpo-modal-body">
+
+                <label for="mpo-modal-controller" class="mpo-modal-close">&times;</label>
+
+                <input type="radio" name="content-nav" id="modal-content-1" class="modal-radio" checked hidden/>
+                <input type="radio" name="content-nav" id="modal-content-2" class="modal-radio" hidden/>
+                <input type="radio" name="content-nav" id="modal-content-3" class="modal-radio" hidden/>
+
+                <div class="content-1">
+                    <h2>QRCODE</h2>
+                    <div id="qrContent" class="mpo-modal-content">
+                    </div>
+                </div>
 
 
+            </div>
+        </div>
 
-    <!--div id="successModal" class="modal fade">
-        <div class="modal-dialog modal-confirm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="icon-box">
-                        <i id="iconModalSucesss" class="material-icons">&#xE876;</i> <!-- &#xE5CD;  Error-->
-    <!--/div>
-    <h4 id="modalTitleSucesss" class="modal-title w-100">Awesome!</h4>
     </div>
-    <div class="modal-body">
-    <p id="ModalMessageSucesss" class="text-center">Registered</p>
-    </div>
-    <div class="modal-footer">
-    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
-    </div>
-    </div>
-    </div>
-    </div-->
+    <script type="text/javascript">
+    if (window.location.href.indexOf("localhost") > -1)
+    {
+        var qrcode = new QRCode(document.getElementById("qrContent"), {
+        text: "http://harness-demo.site/diegopereiraeng/index.html",
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+        });
+    }
+    else
+    {
+        var qrcode = new QRCode(document.getElementById("qrContent"), {
+        text: window.location.href,
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+        });
+    }
+
+
+</script>
 
     <!-- Youtube Modal -->
     <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="Harness on Youtube" aria-hidden="true">

@@ -4,6 +4,7 @@
         "sourceType": "module",
         "ecmaFeatures": {}
     },
+    "ignorePatterns": ["**/qrcode.js"],
     "rules": {
         "constructor-super": 2,
         "for-direction": 2,
