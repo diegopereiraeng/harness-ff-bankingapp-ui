@@ -7,7 +7,7 @@ var currentContent
 var MenuVersion = "v1"
 
 const cf = initialize(
-    'eae200d6-fec2-4352-9227-927a67df73ea',
+    'ffbe05e1-6829-4c68-883b-575d097f3aac',
     target
 );
 
